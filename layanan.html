@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html class="light" lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Layanan - PT Rekayasa Sarana Konstruksi</title>
+    <link rel="icon" href="logo.png" type="image/png">
+    <meta name="description"
+        content="Layanan konstruksi lengkap: scaffolding, general contractor, MEP, EPC, dan supplier material. PT Rekayasa Sarana Konstruksi.">
+    <meta property="og:title" content="Layanan - PT Rekayasa Sarana Konstruksi">
+    <meta property="og:description"
+        content="Layanan konstruksi lengkap: scaffolding, general contractor, MEP, EPC, dan supplier material.">
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#002047",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0f1823",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                        'hover': '0 20px 40px -4px rgba(0, 0, 0, 0.1)',
+                        'card': '0 10px 30px -10px rgba(0, 0, 0, 0.15)',
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+    <link rel="stylesheet" href="animations.css">
+</head>
+
+<body class="bg-white text-[#101418] dark:bg-background-dark dark:text-white font-display antialiased">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <header
+            class="sticky top-0 z-50 bg-white dark:bg-background-dark border-b border-solid border-b-[#f0f2f5] dark:border-b-gray-800">
+            <div class="layout-container flex w-full justify-center">
+                <div
+                    class="w-full max-w-[1280px] px-4 md:px-10 py-4 flex items-center justify-between whitespace-nowrap">
+                    <div class="flex items-center gap-4 text-primary dark:text-white">
+                        <img src="logo.png" alt="Rekayasa Sarana Konstruksi Logo" class="h-10 w-auto">
+                        <h2 class="text-primary dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">
+                            Rekayasa Sarana Konstruksi</h2>
+                    </div>
+                    <div class="hidden lg:flex items-center gap-8">
+                        <nav class="flex items-center gap-6">
+                            <a class="text-[#101418] dark:text-gray-200 text-sm font-medium hover:text-primary dark:hover:text-blue-400 transition-colors"
+                                href="index.html">Beranda</a>
+                            <a class="text-primary dark:text-blue-400 text-sm font-bold transition-colors"
+                                href="layanan.html">Layanan</a>
+                            <a class="text-[#101418] dark:text-gray-200 text-sm font-medium hover:text-primary dark:hover:text-blue-400 transition-colors"
+                                href="portofolio.html">Proyek</a>
+                            <a class="text-[#101418] dark:text-gray-200 text-sm font-medium hover:text-primary dark:hover:text-blue-400 transition-colors"
+                                href="klien.html">Klien</a>
+                            <a class="text-[#101418] dark:text-gray-200 text-sm font-medium hover:text-primary dark:hover:text-blue-400 transition-colors"
+                                href="pengalaman-kerja.html">Pengalaman Kerja</a>
+                        </nav>
+                        <a href="kontak.html"
+                            class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary hover:bg-[#001835] transition-colors text-white text-sm font-bold leading-normal tracking-[0.015em] shadow-md hover:shadow-lg">
+                            <span class="truncate">Hubungi Kami</span>
+                        </a>
+                        <button id="dark-mode-toggle"
+                            class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
+                            title="Toggle Dark Mode">
+                            <span id="dark-mode-icon"
+                                class="material-symbols-outlined text-[#101418] dark:text-white">dark_mode</span>
+                        </button>
+                    </div>
+                    <button id="mobile-menu-toggle" class="lg:hidden text-[#101418] dark:text-white cursor-pointer">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu-overlay"
+            class="fixed inset-0 bg-black/50 z-[60] opacity-0 pointer-events-none transition-opacity duration-300">
+        </div>
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu"
+            class="fixed top-0 right-0 h-full w-72 bg-white dark:bg-background-dark z-[70] shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+            <div class="flex items-center justify-between p-4 border-b border-gray-100 dark:border-gray-800">
+                <span class="text-primary dark:text-white font-bold text-lg">Menu</span>
+                <button id="mobile-menu-close"
+                    class="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-white cursor-pointer">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <nav class="flex flex-col p-4 gap-1">
+                <a class="px-4 py-3 rounded-lg text-sm font-medium text-[#101418] dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                    href="index.html">Beranda</a>
+                <a class="px-4 py-3 rounded-lg text-sm font-medium text-[#101418] dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                    href="layanan.html">Layanan</a>
+                <a class="px-4 py-3 rounded-lg text-sm font-medium text-[#101418] dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                    href="portofolio.html">Proyek</a>
+                <a class="px-4 py-3 rounded-lg text-sm font-medium text-[#101418] dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                    href="klien.html">Klien</a>
+                <a class="px-4 py-3 rounded-lg text-sm font-medium text-[#101418] dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                    href="pengalaman-kerja.html">Pengalaman Kerja</a>
+            </nav>
+            <div class="mt-auto p-4 border-t border-gray-100 dark:border-gray-800">
+                <a href="kontak.html"
+                    class="flex w-full items-center justify-center rounded-lg h-10 px-5 bg-primary hover:bg-[#001835] transition-colors text-white text-sm font-bold shadow-md">
+                    Hubungi Kami
+                </a>
+            </div>
+        </div>
+        <div class="w-full">
+            <div class="relative flex min-h-[500px] md:min-h-[600px] flex-col justify-center bg-cover bg-center bg-no-repeat overflow-hidden"
+                style="background-image: linear-gradient(rgba(0, 15, 40, 0.75), rgba(0, 15, 40, 0.9)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5');">
+
+                <!-- Animated Background Elements -->
+                <div
+                    class="absolute top-0 right-0 w-1/3 h-full bg-blue-500/10 -skew-x-12 transform translate-x-1/2 hidden lg:block">
+                </div>
+
+                <div class="layout-container relative z-10 flex w-full justify-center px-4 md:px-10 py-16 md:py-24">
+                    <div class="max-w-[1280px] w-full flex flex-col gap-6" data-aos="fade-up" data-aos-duration="1000">
+                        <div
+                            class="flex items-center gap-2 text-blue-300 text-sm font-bold uppercase tracking-widest mb-2">
+                            <a class="hover:text-white transition-colors" href="index.html">Beranda</a>
+                            <span class="material-symbols-outlined text-xs">chevron_right</span>
+                            <span class="text-white">Layanan Kami</span>
+                        </div>
+                        <h1 class="text-white text-5xl md:text-7xl font-black leading-[1.1] tracking-tight">
+                            Solusi Konstruksi <br class="hidden md:block">
+                            <span
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200">Terintegrasi</span>
+                        </h1>
+                        <p class="text-gray-300 text-lg md:text-xl font-normal leading-relaxed max-w-[700px]">
+                            Menyediakan berbagai layanan teknik dan konstruksi dengan standar kualitas internasional
+                            untuk mendukung kesuksesan proyek infrastruktur Anda.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full bg-white py-20 md:py-32">
+            <div class="layout-container flex w-full justify-center px-4 md:px-10">
+                <div class="max-w-[1280px] w-full grid grid-cols-1 gap-8">
+                    <!-- Service 1: Scaffolding -->
+                    <div id="scaffolding"
+                        class="group relative flex flex-col md:flex-row bg-white dark:bg-[#1a2634] rounded-3xl shadow-soft hover:shadow-hover border border-gray-100 dark:border-gray-800 overflow-hidden transition-all duration-700 hover:-translate-y-2"
+                        data-aos="fade-up">
+
+                        <!-- Image Column with Decorative Overlay -->
+                        <div class="w-full md:w-5/12 relative overflow-hidden aspect-[4/3] md:aspect-auto">
+                            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2940&auto=format&fit=crop"
+                                alt="Scaffolding installation"
+                                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-r from-primary/40 to-transparent opacity-60 group-hover:opacity-30 transition-opacity">
+                            </div>
+
+                            <!-- Floating Badge -->
+                            <div
+                                class="absolute top-6 left-6 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white text-xs font-bold uppercase tracking-widest">
+                                Premium Safety
+                            </div>
+                        </div>
+
+                        <!-- Content Column -->
+                        <div
+                            class="w-full md:w-7/12 p-8 md:p-12 flex flex-col justify-center relative bg-gradient-to-br from-white to-gray-50 dark:from-[#1a2634] dark:to-[#16202b]">
+                            <!-- Glass Icon Container -->
+                            <div class="mb-8 relative inline-block">
+                                <div
+                                    class="w-16 h-16 rounded-2xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-primary dark:text-blue-400 group-hover:bg-primary group-hover:text-white transition-all duration-500 transform group-hover:rotate-6">
+                                    <span class="material-symbols-outlined text-4xl">construction</span>
+                                </div>
+                            </div>
+
+                            <h3 class="text-3xl font-black text-primary dark:text-white mb-4 leading-tight">
+                                Scaffolding Supply <br>
+                                <span class="text-gray-400 font-light">& Installation</span>
+                            </h3>
+
+                            <p class="text-gray-600 dark:text-gray-400 text-lg font-normal mb-8 leading-relaxed">
+                                Solusi penyewaan dan instalasi perancah bersertifikat dengan standar keselamatan
+                                tertinggi untuk proyek infrastruktur kompleks.
+                            </p>
+
+                            <!-- Mini Feature List -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-sm font-bold text-primary dark:text-gray-300">Sertifikasi
+                                        Internasional</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="text-sm font-bold text-primary dark:text-gray-300">Tim Ahli
+                                        Berlisensi</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="text-sm font-bold text-primary dark:text-gray-300">Quality
+                                        Assurance</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="text-sm font-bold text-primary dark:text-gray-300">Dukungan 24/7</span>
+                                </div>
+                            </div>
+
+                            <a href="kontak.html"
+                                class="inline-flex items-center gap-2 text-primary dark:text-blue-400 font-black text-sm uppercase tracking-widest group/link">
+                                Konsultasi Layanan
+                                <span
+                                    class="material-symbols-outlined transition-transform group-hover/link:translate-x-2">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Service 2: MEP Work -->
+                    <div id="mep"
+                        class="group relative flex flex-col md:flex-row bg-white dark:bg-[#1a2634] rounded-3xl shadow-soft hover:shadow-hover border border-gray-100 dark:border-gray-800 overflow-hidden transition-all duration-700 hover:-translate-y-2"
+                        data-aos="fade-up">
+
+                        <!-- Image Column -->
+                        <div class="w-full md:w-5/12 relative overflow-hidden aspect-[4/3] md:aspect-auto">
+                            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2940&auto=format&fit=crop"
+                                alt="Service illustration"
+                                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-r from-primary/40 to-transparent opacity-60 group-hover:opacity-30 transition-opacity">
+                            </div>
+
+                            <!-- Floating Badge -->
+                            <div
+                                class="absolute top-6 left-6 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white text-xs font-bold uppercase tracking-widest">
+                                Integrated Systems
+                            </div>
+                        </div>
+
+                        <!-- Content Column -->
+                        <div
+                            class="w-full md:w-7/12 p-8 md:p-12 flex flex-col justify-center relative bg-gradient-to-br from-white to-gray-50 dark:from-[#1a2634] dark:to-[#16202b]">
+                            <!-- Glass Icon -->
+                            <div class="mb-8 relative inline-block">
+                                <div
+                                    class="w-16 h-16 rounded-2xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-primary dark:text-blue-400 group-hover:bg-primary group-hover:text-white transition-all duration-500 transform group-hover:rotate-6">
+                                    <span class="material-symbols-outlined text-4xl">electric_bolt</span>
+                                </div>
+
+                            </div>
+
+                            <h3 class="text-3xl font-black text-primary dark:text-white mb-4 leading-tight">
+                                Mechanical, Electrical <br>
+                                <span class="text-gray-400 font-light">& Plumbing (MEP)</span>
+                            </h3>
+
+                            <p class="text-gray-600 dark:text-gray-400 text-lg font-normal mb-8 leading-relaxed">
+                                Solusi MEP terpadu untuk bangunan komersial dan industri dengan fokus pada efisiensi
+                                energi.
+                            </p>
+
+                            <!-- Mini Feature List -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-sm font-bold text-primary dark:text-gray-300">HVAC
+                                        Optimization</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="text-sm font-bold text-primary dark:text-gray-300">Power
+                                        Distribution</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="text-sm font-bold text-primary dark:text-gray-300">Smart
+                                        Integration</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="text-sm font-bold text-primary dark:text-gray-300">Fire
+                                        Protection</span>
+                                </div>
+                            </div>
+
+                            <a href="kontak.html"
+                                class="inline-flex items-center gap-2 text-primary dark:text-blue-400 font-black text-sm uppercase tracking-widest group/link">
+                                Konsultasi Layanan
+                                <span
+                                    class="material-symbols-outlined transition-transform group-hover/link:translate-x-2">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Service 3: Civil & Steel -->
+                    <div id="civil"
+                        class="group relative flex flex-col md:flex-row bg-white dark:bg-[#1a2634] rounded-3xl shadow-soft hover:shadow-hover border border-gray-100 dark:border-gray-800 overflow-hidden transition-all duration-700 hover:-translate-y-2"
+                        data-aos="fade-up">
+
+                        <!-- Image Column -->
+                        <div class="w-full md:w-5/12 relative overflow-hidden aspect-[4/3] md:aspect-auto">
+                            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2940&auto=format&fit=crop"
+                                alt="Service illustration"
+                                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-r from-primary/40 to-transparent opacity-60 group-hover:opacity-30 transition-opacity">
+                            </div>
+                        </div>
+
+                        <!-- Content Column -->
+                        <div
+                            class="w-full md:w-7/12 p-8 md:p-12 flex flex-col justify-center relative bg-gradient-to-br from-white to-gray-50 dark:from-[#1a2634] dark:to-[#16202b]">
+                            <!-- Icon -->
+                            <div class="mb-8 relative inline-block">
+                                <div
+                                    class="w-16 h-16 rounded-2xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-primary dark:text-blue-400 group-hover:bg-primary group-hover:text-white transition-all duration-500 transform group-hover:rotate-6">
+                                    <span class="material-symbols-outlined text-4xl">architecture</span>
+                                </div>
+
+                            </div>
+
+                            <h3 class="text-3xl font-black text-primary dark:text-white mb-4 leading-tight">
+                                Civil & Steel <br>
+                                <span class="text-gray-400 font-light">Structure Construction</span>
+                            </h3>
+
+                            <p class="text-gray-600 dark:text-gray-400 text-lg font-normal mb-8 leading-relaxed">
+                                Konstruksi sipil berat dan fabrikasi struktur baja presisi untuk integritas struktural
+                                jangka panjang.
+                            </p>
+
+                            <!-- Features -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-sm font-bold text-primary dark:text-gray-300">Heavy
+                                        Engineering</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="text-sm font-bold text-primary dark:text-gray-300">Precision
+                                        Welding</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="text-sm font-bold text-primary dark:text-gray-300">Structral
+                                        Fabrications</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="text-sm font-bold text-primary dark:text-gray-300">Corrosion
+                                        Protection</span>
+                                </div>
+                            </div>
+
+                            <a href="kontak.html"
+                                class="inline-flex items-center gap-2 text-primary dark:text-blue-400 font-black text-sm uppercase tracking-widest group/link">
+                                Konsultasi Layanan
+                                <span
+                                    class="material-symbols-outlined transition-transform group-hover/link:translate-x-2">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Service 4: Blasting & Painting -->
+                    <div id="blasting"
+                        class="group relative flex flex-col md:flex-row bg-white dark:bg-[#1a2634] rounded-3xl shadow-soft hover:shadow-hover border border-gray-100 dark:border-gray-800 overflow-hidden transition-all duration-700 hover:-translate-y-2"
+                        data-aos="fade-up">
+
+                        <!-- Image Column -->
+                        <div class="w-full md:w-5/12 relative overflow-hidden aspect-[4/3] md:aspect-auto">
+                            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2940&auto=format&fit=crop"
+                                alt="Service illustration"
+                                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-r from-primary/40 to-transparent opacity-60 group-hover:opacity-30 transition-opacity">
+                            </div>
+                        </div>
+
+                        <!-- Content Column -->
+                        <div
+                            class="w-full md:w-7/12 p-8 md:p-12 flex flex-col justify-center relative bg-gradient-to-br from-white to-gray-50 dark:from-[#1a2634] dark:to-[#16202b]">
+                            <!-- Icon -->
+                            <div class="mb-8 relative inline-block">
+                                <div
+                                    class="w-16 h-16 rounded-2xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-primary dark:text-blue-400 group-hover:bg-primary group-hover:text-white transition-all duration-500 transform group-hover:rotate-6">
+                                    <span class="material-symbols-outlined text-4xl">format_paint</span>
+                                </div>
+
+                            </div>
+
+                            <h3 class="text-3xl font-black text-primary dark:text-white mb-4 leading-tight">
+                                Blasting & <br>
+                                <span class="text-gray-400 font-light">Painting Services</span>
+                            </h3>
+
+                            <p class="text-gray-600 dark:text-gray-400 text-lg font-normal mb-8 leading-relaxed">
+                                Perlindungan aset melalui sandblasting dan coating industri berkualitas tinggi untuk
+                                daya tahan maksimum.
+                            </p>
+
+                            <!-- Features -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-sm font-bold text-primary dark:text-gray-300">Surface
+                                        Preparation</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span
+                                        class="text-sm font-bold text-primary dark:text-gray-300">Anti-Corrosion</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="text-sm font-bold text-primary dark:text-gray-300">Industrial
+                                        Coating</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="text-sm font-bold text-primary dark:text-gray-300">Long-term
+                                        Durability</span>
+                                </div>
+                            </div>
+
+                            <a href="kontak.html"
+                                class="inline-flex items-center gap-2 text-primary dark:text-blue-400 font-black text-sm uppercase tracking-widest group/link">
+                                Konsultasi Layanan
+                                <span
+                                    class="material-symbols-outlined transition-transform group-hover/link:translate-x-2">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Service 5: Man Power Supply -->
+                    <div id="manpower"
+                        class="group relative flex flex-col md:flex-row bg-white dark:bg-[#1a2634] rounded-3xl shadow-soft hover:shadow-hover border border-gray-100 dark:border-gray-800 overflow-hidden transition-all duration-700 hover:-translate-y-2"
+                        data-aos="fade-up">
+
+                        <!-- Image Column -->
+                        <div class="w-full md:w-5/12 relative overflow-hidden aspect-[4/3] md:aspect-auto">
+                            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2940&auto=format&fit=crop"
+                                alt="Service illustration"
+                                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-r from-primary/40 to-transparent opacity-60 group-hover:opacity-30 transition-opacity">
+                            </div>
+                        </div>
+
+                        <!-- Content Column -->
+                        <div
+                            class="w-full md:w-7/12 p-8 md:p-12 flex flex-col justify-center relative bg-gradient-to-br from-white to-gray-50 dark:from-[#1a2634] dark:to-[#16202b]">
+                            <!-- Icon -->
+                            <div class="mb-8 relative inline-block">
+                                <div
+                                    class="w-16 h-16 rounded-2xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-primary dark:text-blue-400 group-hover:bg-primary group-hover:text-white transition-all duration-500 transform group-hover:rotate-6">
+                                    <span class="material-symbols-outlined text-4xl">groups</span>
+                                </div>
+
+                            </div>
+
+                            <h3 class="text-3xl font-black text-primary dark:text-white mb-4 leading-tight">
+                                Man Power <br>
+                                <span class="text-gray-400 font-light">Supply</span>
+                            </h3>
+
+                            <p class="text-gray-600 dark:text-gray-400 text-lg font-normal mb-8 leading-relaxed">
+                                Penyediaan tenaga kerja terampil dan bersertifikat untuk mendukung kelancaran proyek
+                                Anda.
+                            </p>
+
+                            <!-- Features -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-sm font-bold text-primary dark:text-gray-300">Certified
+                                        Experts</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="text-sm font-bold text-primary dark:text-gray-300">Technical
+                                        Support</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="text-sm font-bold text-primary dark:text-gray-300">Safety
+                                        Trained</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="text-sm font-bold text-primary dark:text-gray-300">Highly Mobile</span>
+                                </div>
+                            </div>
+
+                            <a href="kontak.html"
+                                class="inline-flex items-center gap-2 text-primary dark:text-blue-400 font-black text-sm uppercase tracking-widest group/link">
+                                Konsultasi Layanan
+                                <span
+                                    class="material-symbols-outlined transition-transform group-hover/link:translate-x-2">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Service 6: EPC -->
+                    <div id="epc"
+                        class="group relative flex flex-col md:flex-row bg-white dark:bg-[#1a2634] rounded-3xl shadow-soft hover:shadow-hover border border-gray-100 dark:border-gray-800 overflow-hidden transition-all duration-700 hover:-translate-y-2"
+                        data-aos="fade-up">
+
+                        <!-- Image Column -->
+                        <div class="w-full md:w-5/12 relative overflow-hidden aspect-[4/3] md:aspect-auto">
+                            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2940&auto=format&fit=crop"
+                                alt="Service illustration"
+                                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-r from-primary/40 to-transparent opacity-60 group-hover:opacity-30 transition-opacity">
+                            </div>
+                        </div>
+
+                        <!-- Content Column -->
+                        <div
+                            class="w-full md:w-7/12 p-8 md:p-12 flex flex-col justify-center relative bg-gradient-to-br from-white to-gray-50 dark:from-[#1a2634] dark:to-[#16202b]">
+                            <!-- Icon -->
+                            <div class="mb-8 relative inline-block">
+                                <div
+                                    class="w-16 h-16 rounded-2xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-primary dark:text-blue-400 group-hover:bg-primary group-hover:text-white transition-all duration-500 transform group-hover:rotate-6">
+                                    <span class="material-symbols-outlined text-4xl">factory</span>
+                                </div>
+
+                            </div>
+
+                            <h3 class="text-3xl font-black text-primary dark:text-white mb-4 leading-tight">
+                                Engineering, Procurement <br>
+                                <span class="text-gray-400 font-light">& Construction (EPC)</span>
+                            </h3>
+
+                            <p class="text-gray-600 dark:text-gray-400 text-lg font-normal mb-8 leading-relaxed">
+                                Layanan EPC menyeluruh dari tahap desain awal hingga serah terima operasional tepat
+                                waktu.
+                            </p>
+
+                            <!-- Features -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-sm font-bold text-primary dark:text-gray-300">Full
+                                        Lifecycle</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="text-sm font-bold text-primary dark:text-gray-300">Cost
+                                        Optimized</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="text-sm font-bold text-primary dark:text-gray-300">Project
+                                        Management</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="text-sm font-bold text-primary dark:text-gray-300">Turnkey
+                                        Solutions</span>
+                                </div>
+                            </div>
+
+                            <a href="kontak.html"
+                                class="inline-flex items-center gap-2 text-primary dark:text-blue-400 font-black text-sm uppercase tracking-widest group/link">
+                                Konsultasi Layanan
+                                <span
+                                    class="material-symbols-outlined transition-transform group-hover/link:translate-x-2">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full bg-primary text-white py-20 md:py-28 relative overflow-hidden">
+            <div
+                class="absolute top-0 right-0 w-96 h-96 bg-blue-500 rounded-full mix-blend-overlay filter blur-[100px] opacity-30 -mr-20 -mt-20 pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-0 left-0 w-80 h-80 bg-cyan-400 rounded-full mix-blend-overlay filter blur-[100px] opacity-20 -ml-20 -mb-20 pointer-events-none">
+            </div>
+            <div class="layout-container flex w-full justify-center px-4 md:px-10 relative z-10">
+                <div class="w-full md:w-1/2 text-white" data-aos="fade-right">
+                    <h2 class="text-3xl md:text-5xl font-black mb-6 leading-tight">Konsultasikan Proyek <br>Strategis
+                        Anda</h2>
+                    <p class="text-blue-100 text-lg mb-8 opacity-90">Tim ahli kami siap memberikan solusi teknis terbaik
+                        dan estimasi biaya yang akurat untuk mendukung visi pembangunan Anda.</p>
+                </div>
+                <div class="w-full md:w-1/2 flex flex-col sm:flex-row gap-4 justify-center md:justify-end"
+                    data-aos="fade-left">
+                    <a href="kontak.html"
+                        class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-14 px-8 bg-white hover:bg-gray-100 transition-colors text-primary text-base font-bold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                        <span class="truncate">Hubungi Kami</span>
+                    </a>
+                    <a href="portofolio.html"
+                        class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-14 px-8 border border-white/30 bg-white/10 hover:bg-white/20 transition-colors text-white text-base font-bold backdrop-blur-sm">
+                        <span class="truncate">Lihat Portofolio</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="w-full bg-[#0f1823] text-white pt-16 pb-8 border-t border-gray-800">
+        <div class="layout-container flex w-full justify-center px-4 md:px-10">
+            <div class="max-w-[1280px] w-full flex flex-col gap-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-3xl text-white">engineering</span>
+                            <span class="text-xl font-bold">Rekayasa Sarana Konstruksi</span>
+                        </div>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Mitra berharga Anda yang tumbuh dengan pengetahuan luas dalam konstruksi dan rekayasa.
+                        </p>
+                        <div class="flex gap-4 mt-2">
+                            <a class="text-gray-400 hover:text-white transition-colors" href="#"><span
+                                    class="material-symbols-outlined">public</span></a>
+                            <a class="text-gray-400 hover:text-white transition-colors" href="#"><span
+                                    class="material-symbols-outlined">mail</span></a>
+                            <a class="text-gray-400 hover:text-white transition-colors" href="#"><span
+                                    class="material-symbols-outlined">call</span></a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h4 class="text-lg font-bold">Head Office</h4>
+                        <div class="flex flex-col gap-2 text-sm text-gray-400">
+                            <p>Jalan Komplek Palem Lestari</p>
+                            <p>Ruko Galaxy Cengkareng Barat</p>
+                            <p>Cengkareng Kota Adm, Jakarta Barat</p>
+                            <p>DKI Jakarta</p>
+                            <p class="mt-2 text-white"><span
+                                    class="material-symbols-outlined text-sm align-middle mr-1">mail</span>
+                                marketing@reksakon.com</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h4 class="text-lg font-bold">Operational Office</h4>
+                        <div class="flex flex-col gap-2 text-sm text-gray-400">
+                            <p>Jalan Kh Syafi'i IV/77 Dahanrejo</p>
+                            <p>Rt 001 Rw 002 Kec. Kebomas</p>
+                            <p>Kab. Gresik - Jawa Timur</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h4 class="text-lg font-bold">Tautan Cepat</h4>
+                        <div class="flex flex-col gap-2 text-sm text-gray-400">
+                            <a class="hover:text-white transition-colors" href="index.html">Beranda</a>
+                            <a class="hover:text-white transition-colors" href="layanan.html">Layanan</a>
+                            <a class="hover:text-white transition-colors" href="portofolio.html">Proyek</a>
+                            <a class="hover:text-white transition-colors" href="klien.html">Klien</a>
+                            <a class="hover:text-white transition-colors" href="pengalaman-kerja.html">Pengalaman
+                                Kerja</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+                <p>© 2024 PT Rekayasa Sarana Konstruksi. Hak Cipta Dilindungi.</p>
+                <div class="flex gap-6">
+                    <a class="hover:text-gray-300" href="#">Kebijakan Privasi</a>
+                    <a class="hover:text-gray-300" href="#">Syarat &amp; Ketentuan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+            easing: 'ease-out-cubic'
+        });
+    </script>
+    <script src="animations.js"></script>
+    <script src="mobile-menu.js"></script>
+    <script src="dark-mode.js"></script>
+</body>
+
+</html>
