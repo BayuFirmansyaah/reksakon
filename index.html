@@ -426,344 +426,492 @@
                 </div>
             </div>
         </div>
+        <!-- Mitra Strategis Section -->
         <div
-            class="w-full bg-slate-50 dark:bg-[#0f1823] py-24 border-t border-gray-100 dark:border-gray-800 relative overflow-hidden">
+            class="w-full bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-[#0f1823] dark:via-[#131e2b] dark:to-[#0f1823] py-24 md:py-32 relative overflow-hidden">
             <!-- Decorative background elements -->
-            <div class="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
-            <div class="absolute bottom-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -ml-32 -mb-32"></div>
+            <div
+                class="absolute top-20 right-0 w-[500px] h-[500px] bg-gradient-to-br from-blue-400/5 to-indigo-500/5 rounded-full blur-3xl -mr-48">
+            </div>
+            <div
+                class="absolute bottom-20 left-0 w-[400px] h-[400px] bg-gradient-to-tr from-primary/5 to-cyan-500/5 rounded-full blur-3xl -ml-48">
+            </div>
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-gradient-to-r from-blue-500/3 to-indigo-500/3 rounded-full blur-3xl">
+            </div>
 
             <div class="layout-container flex w-full justify-center px-4 md:px-10">
                 <div id="klien" class="max-w-[1280px] w-full flex flex-col items-center gap-16">
-                    <div class="text-center" data-aos="zoom-in">
-                        <div
-                            class="inline-flex items-center gap-2 text-primary dark:text-blue-400 font-bold uppercase tracking-widest text-xs mb-3">
-                            <span class="w-10 h-[1px] bg-primary dark:bg-blue-400"></span>
-                            Trusted by Industry Leaders
-                            <span class="w-10 h-[1px] bg-primary dark:bg-blue-400"></span>
+
+                    <!-- Section Header -->
+                    <div class="w-full flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8"
+                        data-aos="fade-up">
+                        <div class="flex flex-col gap-4 lg:max-w-[55%]">
+                            <div
+                                class="inline-flex items-center gap-3 text-primary dark:text-blue-400 font-bold uppercase tracking-[0.2em] text-xs">
+                                <span class="flex items-center gap-2">
+                                    <span class="w-8 h-[2px] bg-gradient-to-r from-primary to-blue-400"></span>
+                                    <span class="material-symbols-outlined text-sm">verified</span>
+                                </span>
+                                Trusted Partners
+                            </div>
+                            <h2
+                                class="text-primary dark:text-white text-3xl md:text-4xl lg:text-5xl font-black leading-tight">
+                                Mitra Strategis<br class="hidden md:block"> <span
+                                    class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">Kami</span>
+                            </h2>
+                            <p class="text-gray-500 dark:text-gray-400 text-base md:text-lg leading-relaxed max-w-xl">
+                                Dipercaya oleh berbagai perusahaan terkemuka di sektor minyak & gas,
+                                pertambangan, dan infrastruktur di seluruh Indonesia.
+                            </p>
                         </div>
-                        <h2 class="text-primary dark:text-white text-3xl md:text-4xl font-black">Mitra Strategis</h2>
+                        <!-- Stats -->
+                        <div class="flex gap-6 lg:gap-10">
+                            <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                                <div class="text-3xl md:text-4xl font-black text-primary dark:text-white leading-none">
+                                    10+</div>
+                                <div
+                                    class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mt-2">
+                                    Mitra Aktif</div>
+                            </div>
+                            <div class="w-px bg-gray-200 dark:bg-gray-700"></div>
+                            <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                                <div class="text-3xl md:text-4xl font-black text-primary dark:text-white leading-none">
+                                    5+</div>
+                                <div
+                                    class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mt-2">
+                                    Sektor Industri</div>
+                            </div>
+                            <div class="w-px bg-gray-200 dark:bg-gray-700"></div>
+                            <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                                <div class="text-3xl md:text-4xl font-black text-primary dark:text-white leading-none">
+                                    15+</div>
+                                <div
+                                    class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mt-2">
+                                    Tahun Relasi</div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="w-full relative" data-aos="fade-up">
-                        <!-- Fade overlays for marquee -->
+                    <!-- Partner Cards Grid -->
+                    <div class="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-5" data-aos="fade-up"
+                        data-aos-delay="100">
+
                         <div
-                            class="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-slate-50 dark:from-[#0f1823] to-transparent z-10">
+                            class="partner-card group relative bg-white dark:bg-[#1a2634] rounded-2xl border border-gray-100 dark:border-gray-700/50 p-6 flex flex-col items-center gap-4 text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_-12px_rgba(0,32,71,0.15)] dark:hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)] hover:border-primary/20 dark:hover:border-blue-500/30 overflow-hidden cursor-pointer">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-indigo-50/50 dark:from-blue-900/10 dark:to-indigo-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            </div>
+                            <div
+                                class="relative z-10 w-16 h-16 flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/20 rounded-xl group-hover:scale-110 transition-transform duration-500">
+                                <span
+                                    class="material-symbols-outlined text-3xl text-primary dark:text-blue-400">diamond</span>
+                            </div>
+                            <div class="relative z-10">
+                                <h4 class="text-sm font-bold text-slate-800 dark:text-slate-100 leading-snug">
+                                    PT. Freeport Indonesia</h4>
+                                <p class="text-xs text-gray-400 dark:text-gray-500 mt-1">Pertambangan</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="partner-card group relative bg-white dark:bg-[#1a2634] rounded-2xl border border-gray-100 dark:border-gray-700/50 p-6 flex flex-col items-center gap-4 text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_-12px_rgba(0,32,71,0.15)] dark:hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)] hover:border-primary/20 dark:hover:border-blue-500/30 overflow-hidden cursor-pointer">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-indigo-50/50 dark:from-blue-900/10 dark:to-indigo-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            </div>
+                            <div
+                                class="relative z-10 w-16 h-16 flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/20 rounded-xl group-hover:scale-110 transition-transform duration-500">
+                                <span
+                                    class="material-symbols-outlined text-3xl text-primary dark:text-blue-400">factory</span>
+                            </div>
+                            <div class="relative z-10">
+                                <h4 class="text-sm font-bold text-slate-800 dark:text-slate-100 leading-snug">
+                                    Hatch</h4>
+                                <p class="text-xs text-gray-400 dark:text-gray-500 mt-1">Engineering</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="partner-card group relative bg-white dark:bg-[#1a2634] rounded-2xl border border-gray-100 dark:border-gray-700/50 p-6 flex flex-col items-center gap-4 text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_-12px_rgba(0,32,71,0.15)] dark:hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)] hover:border-primary/20 dark:hover:border-blue-500/30 overflow-hidden cursor-pointer">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-indigo-50/50 dark:from-blue-900/10 dark:to-indigo-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            </div>
+                            <div
+                                class="relative z-10 w-16 h-16 flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/20 rounded-xl group-hover:scale-110 transition-transform duration-500">
+                                <span
+                                    class="material-symbols-outlined text-3xl text-primary dark:text-blue-400">local_gas_station</span>
+                            </div>
+                            <div class="relative z-10">
+                                <h4 class="text-sm font-bold text-slate-800 dark:text-slate-100 leading-snug">
+                                    Pertamina</h4>
+                                <p class="text-xs text-gray-400 dark:text-gray-500 mt-1">Energi</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="partner-card group relative bg-white dark:bg-[#1a2634] rounded-2xl border border-gray-100 dark:border-gray-700/50 p-6 flex flex-col items-center gap-4 text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_-12px_rgba(0,32,71,0.15)] dark:hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)] hover:border-primary/20 dark:hover:border-blue-500/30 overflow-hidden cursor-pointer">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-indigo-50/50 dark:from-blue-900/10 dark:to-indigo-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            </div>
+                            <div
+                                class="relative z-10 w-16 h-16 flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/20 rounded-xl group-hover:scale-110 transition-transform duration-500">
+                                <span
+                                    class="material-symbols-outlined text-3xl text-primary dark:text-blue-400">handshake</span>
+                            </div>
+                            <div class="relative z-10">
+                                <h4 class="text-sm font-bold text-slate-800 dark:text-slate-100 leading-snug">
+                                    Swadaya Cipta</h4>
+                                <p class="text-xs text-gray-400 dark:text-gray-500 mt-1">Konstruksi</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="partner-card group relative bg-white dark:bg-[#1a2634] rounded-2xl border border-gray-100 dark:border-gray-700/50 p-6 flex flex-col items-center gap-4 text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_-12px_rgba(0,32,71,0.15)] dark:hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)] hover:border-primary/20 dark:hover:border-blue-500/30 overflow-hidden cursor-pointer">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-indigo-50/50 dark:from-blue-900/10 dark:to-indigo-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            </div>
+                            <div
+                                class="relative z-10 w-16 h-16 flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/20 rounded-xl group-hover:scale-110 transition-transform duration-500">
+                                <span
+                                    class="material-symbols-outlined text-3xl text-primary dark:text-blue-400">star</span>
+                            </div>
+                            <div class="relative z-10">
+                                <h4 class="text-sm font-bold text-slate-800 dark:text-slate-100 leading-snug">
+                                    PT. Sang Bintang Sinergi</h4>
+                                <p class="text-xs text-gray-400 dark:text-gray-500 mt-1">Infrastruktur</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Infinite Marquee -->
+                    <div class="w-full relative" data-aos="fade-up" data-aos-delay="200">
+                        <div
+                            class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white dark:from-[#131e2b] to-transparent z-10">
                         </div>
                         <div
-                            class="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-slate-50 dark:from-[#0f1823] to-transparent z-10">
+                            class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-white dark:from-[#131e2b] to-transparent z-10">
                         </div>
 
                         <div class="overflow-hidden">
-                            <div class="animate-marquee flex gap-6 py-4">
-                                <!-- First Group -->
-                                <div class="flex gap-6">
+                            <div class="animate-marquee flex gap-8 py-4">
+                                <div class="flex gap-8">
                                     <div class="logo-card">
                                         <div
-                                            class="w-12 h-12 flex items-center justify-center bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                                            class="w-11 h-11 flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/20 rounded-lg flex-shrink-0">
                                             <span
-                                                class="material-symbols-outlined text-3xl text-primary dark:text-blue-400">diamond</span>
-                                        </div>
-                                        <span class="text-lg font-bold text-slate-700 dark:text-slate-200">PT. Freeport
-                                            Indonesia</span>
-                                    </div>
-                                    <div class="logo-card">
-                                        <div
-                                            class="w-12 h-12 flex items-center justify-center bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-                                            <span
-                                                class="material-symbols-outlined text-3xl text-primary dark:text-blue-400">factory</span>
-                                        </div>
-                                        <span class="text-lg font-bold text-slate-700 dark:text-slate-200">Hatch</span>
-                                    </div>
-                                    <div class="logo-card">
-                                        <div
-                                            class="w-12 h-12 flex items-center justify-center bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-                                            <span
-                                                class="material-symbols-outlined text-3xl text-primary dark:text-blue-400">local_gas_station</span>
+                                                class="material-symbols-outlined text-2xl text-primary dark:text-blue-400">diamond</span>
                                         </div>
                                         <span
-                                            class="text-lg font-bold text-slate-700 dark:text-slate-200">Pertamina</span>
+                                            class="text-base font-bold text-slate-700 dark:text-slate-200 whitespace-nowrap">PT.
+                                            Freeport Indonesia</span>
                                     </div>
                                     <div class="logo-card">
                                         <div
-                                            class="w-12 h-12 flex items-center justify-center bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                                            class="w-11 h-11 flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/20 rounded-lg flex-shrink-0">
                                             <span
-                                                class="material-symbols-outlined text-3xl text-primary dark:text-blue-400">handshake</span>
+                                                class="material-symbols-outlined text-2xl text-primary dark:text-blue-400">factory</span>
                                         </div>
-                                        <span class="text-lg font-bold text-slate-700 dark:text-slate-200">Swadaya
+                                        <span
+                                            class="text-base font-bold text-slate-700 dark:text-slate-200 whitespace-nowrap">Hatch</span>
+                                    </div>
+                                    <div class="logo-card">
+                                        <div
+                                            class="w-11 h-11 flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/20 rounded-lg flex-shrink-0">
+                                            <span
+                                                class="material-symbols-outlined text-2xl text-primary dark:text-blue-400">local_gas_station</span>
+                                        </div>
+                                        <span
+                                            class="text-base font-bold text-slate-700 dark:text-slate-200 whitespace-nowrap">Pertamina</span>
+                                    </div>
+                                    <div class="logo-card">
+                                        <div
+                                            class="w-11 h-11 flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/20 rounded-lg flex-shrink-0">
+                                            <span
+                                                class="material-symbols-outlined text-2xl text-primary dark:text-blue-400">handshake</span>
+                                        </div>
+                                        <span
+                                            class="text-base font-bold text-slate-700 dark:text-slate-200 whitespace-nowrap">Swadaya
                                             Cipta</span>
                                     </div>
                                     <div class="logo-card">
                                         <div
-                                            class="w-12 h-12 flex items-center justify-center bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                                            class="w-11 h-11 flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/20 rounded-lg flex-shrink-0">
                                             <span
-                                                class="material-symbols-outlined text-3xl text-primary dark:text-blue-400">star</span>
+                                                class="material-symbols-outlined text-2xl text-primary dark:text-blue-400">star</span>
                                         </div>
-                                        <span class="text-lg font-bold text-slate-700 dark:text-slate-200">PT. Sang
-                                            Bintang Sinergi</span>
+                                        <span
+                                            class="text-base font-bold text-slate-700 dark:text-slate-200 whitespace-nowrap">PT.
+                                            Sang Bintang Sinergi</span>
                                     </div>
                                 </div>
-                                <!-- Second Group (Replicated for infinite effect) -->
-                                <div class="flex gap-6">
+                                <div class="flex gap-8">
                                     <div class="logo-card">
                                         <div
-                                            class="w-12 h-12 flex items-center justify-center bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                                            class="w-11 h-11 flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/20 rounded-lg flex-shrink-0">
                                             <span
-                                                class="material-symbols-outlined text-3xl text-primary dark:text-blue-400">diamond</span>
-                                        </div>
-                                        <span class="text-lg font-bold text-slate-700 dark:text-slate-200">PT. Freeport
-                                            Indonesia</span>
-                                    </div>
-                                    <div class="logo-card">
-                                        <div
-                                            class="w-12 h-12 flex items-center justify-center bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-                                            <span
-                                                class="material-symbols-outlined text-3xl text-primary dark:text-blue-400">factory</span>
-                                        </div>
-                                        <span class="text-lg font-bold text-slate-700 dark:text-slate-200">Hatch</span>
-                                    </div>
-                                    <div class="logo-card">
-                                        <div
-                                            class="w-12 h-12 flex items-center justify-center bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-                                            <span
-                                                class="material-symbols-outlined text-3xl text-primary dark:text-blue-400">local_gas_station</span>
+                                                class="material-symbols-outlined text-2xl text-primary dark:text-blue-400">diamond</span>
                                         </div>
                                         <span
-                                            class="text-lg font-bold text-slate-700 dark:text-slate-200">Pertamina</span>
+                                            class="text-base font-bold text-slate-700 dark:text-slate-200 whitespace-nowrap">PT.
+                                            Freeport Indonesia</span>
                                     </div>
                                     <div class="logo-card">
                                         <div
-                                            class="w-12 h-12 flex items-center justify-center bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                                            class="w-11 h-11 flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/20 rounded-lg flex-shrink-0">
                                             <span
-                                                class="material-symbols-outlined text-3xl text-primary dark:text-blue-400">handshake</span>
+                                                class="material-symbols-outlined text-2xl text-primary dark:text-blue-400">factory</span>
                                         </div>
-                                        <span class="text-lg font-bold text-slate-700 dark:text-slate-200">Swadaya
+                                        <span
+                                            class="text-base font-bold text-slate-700 dark:text-slate-200 whitespace-nowrap">Hatch</span>
+                                    </div>
+                                    <div class="logo-card">
+                                        <div
+                                            class="w-11 h-11 flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/20 rounded-lg flex-shrink-0">
+                                            <span
+                                                class="material-symbols-outlined text-2xl text-primary dark:text-blue-400">local_gas_station</span>
+                                        </div>
+                                        <span
+                                            class="text-base font-bold text-slate-700 dark:text-slate-200 whitespace-nowrap">Pertamina</span>
+                                    </div>
+                                    <div class="logo-card">
+                                        <div
+                                            class="w-11 h-11 flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/20 rounded-lg flex-shrink-0">
+                                            <span
+                                                class="material-symbols-outlined text-2xl text-primary dark:text-blue-400">handshake</span>
+                                        </div>
+                                        <span
+                                            class="text-base font-bold text-slate-700 dark:text-slate-200 whitespace-nowrap">Swadaya
                                             Cipta</span>
                                     </div>
                                     <div class="logo-card">
                                         <div
-                                            class="w-12 h-12 flex items-center justify-center bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                                            class="w-11 h-11 flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/20 rounded-lg flex-shrink-0">
                                             <span
-                                                class="material-symbols-outlined text-3xl text-primary dark:text-blue-400">star</span>
+                                                class="material-symbols-outlined text-2xl text-primary dark:text-blue-400">star</span>
                                         </div>
-                                        <span class="text-lg font-bold text-slate-700 dark:text-slate-200">PT. Sang
-                                            Bintang Sinergi</span>
+                                        <span
+                                            class="text-base font-bold text-slate-700 dark:text-slate-200 whitespace-nowrap">PT.
+                                            Sang Bintang Sinergi</span>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="flex justify-center mt-8" data-aos="fade-up">
-                            <a href="klien.html"
-                                class="inline-flex items-center gap-2 px-8 py-3 bg-white dark:bg-[#1a2634] text-primary dark:text-blue-400 font-bold rounded-xl border border-gray-100 dark:border-gray-800 hover:shadow-hover transition-all group">
-                                Lihat Semua Mitra
-                                <span
-                                    class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                            </a>
                         </div>
                     </div>
+
+                    <!-- CTA -->
+                    <div class="flex flex-col items-center gap-6" data-aos="fade-up" data-aos-delay="300">
+                        <a href="klien.html"
+                            class="group inline-flex items-center gap-3 px-8 py-4 bg-primary hover:bg-[#001835] text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-primary/20 hover:-translate-y-0.5">
+                            <span>Lihat Semua Mitra</span>
+                            <span
+                                class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </a>
+                        <p class="text-xs text-gray-400 dark:text-gray-500">Bergabung dengan jaringan mitra
+                            strategis kami</p>
+                    </div>
+
                 </div>
             </div>
-            <div class="w-full bg-primary text-white py-16 md:py-24">
-                <div class="layout-container flex w-full justify-center px-4 md:px-10">
-                    <div class="max-w-[1280px] w-full flex flex-col gap-12">
-                        <div class="flex flex-col md:flex-row justify-between items-end gap-6" data-aos="fade-up">
-                            <div class="flex flex-col gap-2">
-                                <div
-                                    class="inline-flex items-center gap-2 text-blue-300 font-bold uppercase tracking-wider text-sm">
-                                    <span class="material-symbols-outlined text-lg">work</span>
-                                    <span>Portofolio</span>
-                                </div>
-                                <h2 class="text-4xl font-bold">Proyek Terselesaikan</h2>
+        </div>
+        <div class="w-full bg-primary text-white py-16 md:py-24">
+            <div class="layout-container flex w-full justify-center px-4 md:px-10">
+                <div class="max-w-[1280px] w-full flex flex-col gap-12">
+                    <div class="flex flex-col md:flex-row justify-between items-end gap-6" data-aos="fade-up">
+                        <div class="flex flex-col gap-2">
+                            <div
+                                class="inline-flex items-center gap-2 text-blue-300 font-bold uppercase tracking-wider text-sm">
+                                <span class="material-symbols-outlined text-lg">work</span>
+                                <span>Portofolio</span>
                             </div>
-                            <a href="portofolio.html"
-                                class="hidden md:flex border border-white text-white px-6 py-2 rounded-lg hover:bg-white hover:text-primary transition-colors text-sm font-bold">
-                                Lihat Semua Proyek
-                            </a>
-                        </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            <div class="group relative overflow-hidden rounded-xl h-[400px] cursor-pointer"
-                                data-aos="fade-up" data-aos-delay="100">
-                                <div
-                                    class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2940&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110">
-                                </div>
-                                <div
-                                    class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent">
-                                </div>
-                                <div class="absolute bottom-0 left-0 p-8 w-full">
-                                    <h3 class="text-2xl font-bold mb-2">RDMP Balikpapan</h3>
-                                    <p class="text-gray-300 text-sm line-clamp-2">Pekerjaan Painting &amp; Coating
-                                        untuk
-                                        perluasan kilang minyak, memastikan standar perlindungan korosi tertinggi.
-                                    </p>
-                                    <div class="flex gap-2 mt-4">
-                                        <span
-                                            class="bg-blue-600/30 text-blue-200 text-xs px-3 py-1 rounded-full backdrop-blur-sm border border-blue-500/30">Painting
-                                            Work</span>
-                                        <span
-                                            class="bg-blue-600/30 text-blue-200 text-xs px-3 py-1 rounded-full backdrop-blur-sm border border-blue-500/30">Refinery</span>
-                                    </div>
-                                    <div class="mt-6 pt-4 border-t border-white/20">
-                                        <span
-                                            class="text-sm font-bold text-white flex items-center gap-2 hover:gap-3 transition-all">
-                                            Lihat Detail Proyek <span
-                                                class="material-symbols-outlined text-base">arrow_forward</span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="group relative overflow-hidden rounded-xl h-[400px] cursor-pointer"
-                                data-aos="fade-up" data-aos-delay="200">
-                                <div
-                                    class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2940&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110">
-                                </div>
-                                <div
-                                    class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent">
-                                </div>
-                                <div class="absolute bottom-0 left-0 p-8 w-full">
-                                    <h3 class="text-2xl font-bold mb-2">Proyek Smelter Manyar</h3>
-                                    <p class="text-gray-300 text-sm line-clamp-2">Pekerjaan General Civil dan
-                                        Mechanical
-                                        untuk fasilitas pengolahan tembaga modern di Gresik.</p>
-                                    <div class="flex gap-2 mt-4">
-                                        <span
-                                            class="bg-blue-600/30 text-blue-200 text-xs px-3 py-1 rounded-full backdrop-blur-sm border border-blue-500/30">Civil
-                                            Work</span>
-                                        <span
-                                            class="bg-blue-600/30 text-blue-200 text-xs px-3 py-1 rounded-full backdrop-blur-sm border border-blue-500/30">EPC</span>
-                                    </div>
-                                    <div class="mt-6 pt-4 border-t border-white/20">
-                                        <span
-                                            class="text-sm font-bold text-white flex items-center gap-2 hover:gap-3 transition-all">
-                                            Lihat Detail Proyek <span
-                                                class="material-symbols-outlined text-base">arrow_forward</span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
+                            <h2 class="text-4xl font-bold">Proyek Terselesaikan</h2>
                         </div>
                         <a href="portofolio.html"
-                            class="md:hidden w-full border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-primary transition-colors text-sm font-bold text-center block">
+                            class="hidden md:flex border border-white text-white px-6 py-2 rounded-lg hover:bg-white hover:text-primary transition-colors text-sm font-bold">
                             Lihat Semua Proyek
                         </a>
                     </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="group relative overflow-hidden rounded-xl h-[400px] cursor-pointer"
+                            data-aos="fade-up" data-aos-delay="100">
+                            <div
+                                class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2940&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent">
+                            </div>
+                            <div class="absolute bottom-0 left-0 p-8 w-full">
+                                <h3 class="text-2xl font-bold mb-2">RDMP Balikpapan</h3>
+                                <p class="text-gray-300 text-sm line-clamp-2">Pekerjaan Painting &amp; Coating
+                                    untuk
+                                    perluasan kilang minyak, memastikan standar perlindungan korosi tertinggi.
+                                </p>
+                                <div class="flex gap-2 mt-4">
+                                    <span
+                                        class="bg-blue-600/30 text-blue-200 text-xs px-3 py-1 rounded-full backdrop-blur-sm border border-blue-500/30">Painting
+                                        Work</span>
+                                    <span
+                                        class="bg-blue-600/30 text-blue-200 text-xs px-3 py-1 rounded-full backdrop-blur-sm border border-blue-500/30">Refinery</span>
+                                </div>
+                                <div class="mt-6 pt-4 border-t border-white/20">
+                                    <span
+                                        class="text-sm font-bold text-white flex items-center gap-2 hover:gap-3 transition-all">
+                                        Lihat Detail Proyek <span
+                                            class="material-symbols-outlined text-base">arrow_forward</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="group relative overflow-hidden rounded-xl h-[400px] cursor-pointer"
+                            data-aos="fade-up" data-aos-delay="200">
+                            <div
+                                class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2940&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent">
+                            </div>
+                            <div class="absolute bottom-0 left-0 p-8 w-full">
+                                <h3 class="text-2xl font-bold mb-2">Proyek Smelter Manyar</h3>
+                                <p class="text-gray-300 text-sm line-clamp-2">Pekerjaan General Civil dan
+                                    Mechanical
+                                    untuk fasilitas pengolahan tembaga modern di Gresik.</p>
+                                <div class="flex gap-2 mt-4">
+                                    <span
+                                        class="bg-blue-600/30 text-blue-200 text-xs px-3 py-1 rounded-full backdrop-blur-sm border border-blue-500/30">Civil
+                                        Work</span>
+                                    <span
+                                        class="bg-blue-600/30 text-blue-200 text-xs px-3 py-1 rounded-full backdrop-blur-sm border border-blue-500/30">EPC</span>
+                                </div>
+                                <div class="mt-6 pt-4 border-t border-white/20">
+                                    <span
+                                        class="text-sm font-bold text-white flex items-center gap-2 hover:gap-3 transition-all">
+                                        Lihat Detail Proyek <span
+                                            class="material-symbols-outlined text-base">arrow_forward</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="portofolio.html"
+                        class="md:hidden w-full border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-primary transition-colors text-sm font-bold text-center block">
+                        Lihat Semua Proyek
+                    </a>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Contact Section with Background Image -->
-        <div id="hubungi-kami" class="w-full bg-cover bg-center bg-fixed relative py-16 md:py-24"
-            style='background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2940&auto=format&fit=crop");'>
-            <div class="layout-container flex w-full justify-center px-4 md:px-10">
-                <div class="max-w-[1280px] w-full">
-                    <div class="flex flex-col lg:flex-row bg-white dark:bg-[#1a2634] rounded-3xl overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,0.2)] border border-gray-100 dark:border-gray-800 pb-16"
-                        data-aos="zoom-in-up">
-                        <div class="w-full lg:w-7/12 p-8 md:p-12">
-                            <div
-                                class="inline-flex items-center gap-2 text-primary dark:text-blue-400 font-bold uppercase tracking-widest text-xs mb-4">
-                                <span class="material-symbols-outlined text-sm">mail</span>
-                                Get In Touch
-                            </div>
-                            <h2 class="text-4xl font-black text-primary dark:text-white mb-6 leading-tight">Mulai
-                                Proyek
-                                Anda Bersama Kami</h2>
-                            <p class="text-[#5e738d] dark:text-gray-400 mb-8 text-lg">Konsultasikan kebutuhan
-                                konstruksi
-                                dan engineering Anda dengan tim ahli kami untuk hasil yang presisi.</p>
+    <!-- Contact Section with Background Image -->
+    <div id="hubungi-kami" class="w-full bg-cover bg-center bg-fixed relative py-16 md:py-24"
+        style='background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2940&auto=format&fit=crop");'>
+        <div class="layout-container flex w-full justify-center px-4 md:px-10">
+            <div class="max-w-[1280px] w-full">
+                <div class="flex flex-col lg:flex-row bg-white dark:bg-[#1a2634] rounded-3xl overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,0.2)] border border-gray-100 dark:border-gray-800 pb-16"
+                    data-aos="zoom-in-up">
+                    <div class="w-full lg:w-7/12 p-8 md:p-12">
+                        <div
+                            class="inline-flex items-center gap-2 text-primary dark:text-blue-400 font-bold uppercase tracking-widest text-xs mb-4">
+                            <span class="material-symbols-outlined text-sm">mail</span>
+                            Get In Touch
+                        </div>
+                        <h2 class="text-4xl font-black text-primary dark:text-white mb-6 leading-tight">Mulai
+                            Proyek
+                            Anda Bersama Kami</h2>
+                        <p class="text-[#5e738d] dark:text-gray-400 mb-8 text-lg">Konsultasikan kebutuhan
+                            konstruksi
+                            dan engineering Anda dengan tim ahli kami untuk hasil yang presisi.</p>
 
-                            <form class="flex flex-col gap-5">
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                                    <div class="flex flex-col gap-1.5">
-                                        <label class="text-sm font-semibold text-primary dark:text-gray-200"
-                                            for="name">Nama Lengkap</label>
-                                        <input
-                                            class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-[#15202b] text-primary dark:text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent focus:bg-white dark:focus:bg-[#1a2634] transition-all"
-                                            id="name" placeholder="Masukkan nama Anda" type="text" />
-                                    </div>
-                                    <div class="flex flex-col gap-1.5">
-                                        <label class="text-sm font-semibold text-primary dark:text-gray-200"
-                                            for="email">Alamat Email</label>
-                                        <input
-                                            class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-[#15202b] text-primary dark:text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent focus:bg-white dark:focus:bg-[#1a2634] transition-all"
-                                            id="email" placeholder="email@perusahaan.com" type="email" />
-                                    </div>
-                                </div>
+                        <form class="flex flex-col gap-5">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                                 <div class="flex flex-col gap-1.5">
-                                    <label class="text-sm font-semibold text-primary dark:text-gray-200"
-                                        for="company">Perusahaan</label>
+                                    <label class="text-sm font-semibold text-primary dark:text-gray-200" for="name">Nama
+                                        Lengkap</label>
                                     <input
                                         class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-[#15202b] text-primary dark:text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent focus:bg-white dark:focus:bg-[#1a2634] transition-all"
-                                        id="company" placeholder="Nama Perusahaan" type="text" />
+                                        id="name" placeholder="Masukkan nama Anda" type="text" />
                                 </div>
                                 <div class="flex flex-col gap-1.5">
                                     <label class="text-sm font-semibold text-primary dark:text-gray-200"
-                                        for="message">Pesan</label>
-                                    <textarea
-                                        class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-[#15202b] text-primary dark:text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent focus:bg-white dark:focus:bg-[#1a2634] transition-all min-h-[120px]"
-                                        id="message" placeholder="Jelaskan kebutuhan proyek Anda..."></textarea>
+                                        for="email">Alamat Email</label>
+                                    <input
+                                        class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-[#15202b] text-primary dark:text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent focus:bg-white dark:focus:bg-[#1a2634] transition-all"
+                                        id="email" placeholder="email@perusahaan.com" type="email" />
                                 </div>
-                                <button
-                                    class="mt-4 w-full md:w-auto self-start px-8 py-4 bg-primary hover:bg-[#003066] text-white font-bold rounded-lg transition-colors flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-                                    <span>Kirim Pesan</span>
-                                    <span class="material-symbols-outlined text-sm">send</span>
-                                </button>
-                            </form>
+                            </div>
+                            <div class="flex flex-col gap-1.5">
+                                <label class="text-sm font-semibold text-primary dark:text-gray-200"
+                                    for="company">Perusahaan</label>
+                                <input
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-[#15202b] text-primary dark:text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent focus:bg-white dark:focus:bg-[#1a2634] transition-all"
+                                    id="company" placeholder="Nama Perusahaan" type="text" />
+                            </div>
+                            <div class="flex flex-col gap-1.5">
+                                <label class="text-sm font-semibold text-primary dark:text-gray-200"
+                                    for="message">Pesan</label>
+                                <textarea
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-[#15202b] text-primary dark:text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent focus:bg-white dark:focus:bg-[#1a2634] transition-all min-h-[120px]"
+                                    id="message" placeholder="Jelaskan kebutuhan proyek Anda..."></textarea>
+                            </div>
+                            <button
+                                class="mt-4 w-full md:w-auto self-start px-8 py-4 bg-primary hover:bg-[#003066] text-white font-bold rounded-lg transition-colors flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                                <span>Kirim Pesan</span>
+                                <span class="material-symbols-outlined text-sm">send</span>
+                            </button>
+                        </form>
+                    </div>
+                    <div
+                        class="w-full lg:w-5/12 bg-[#002047] p-6 md:p-12 text-white relative flex flex-col justify-between overflow-hidden">
+                        <div
+                            class="absolute top-0 right-0 w-80 h-80 bg-blue-500 rounded-full mix-blend-overlay filter blur-[64px] opacity-20 -mr-20 -mt-20 pointer-events-none">
                         </div>
                         <div
-                            class="w-full lg:w-5/12 bg-[#002047] p-6 md:p-12 text-white relative flex flex-col justify-between overflow-hidden">
-                            <div
-                                class="absolute top-0 right-0 w-80 h-80 bg-blue-500 rounded-full mix-blend-overlay filter blur-[64px] opacity-20 -mr-20 -mt-20 pointer-events-none">
-                            </div>
-                            <div
-                                class="absolute bottom-0 left-0 w-64 h-64 bg-cyan-400 rounded-full mix-blend-overlay filter blur-[64px] opacity-10 -ml-16 -mb-16 pointer-events-none">
-                            </div>
-                            <div class="relative z-10">
-                                <h3 class="text-2xl font-bold mb-6 md:mb-8">Informasi Kontak</h3>
-                                <div class="grid grid-cols-1 gap-4 md:gap-5">
+                            class="absolute bottom-0 left-0 w-64 h-64 bg-cyan-400 rounded-full mix-blend-overlay filter blur-[64px] opacity-10 -ml-16 -mb-16 pointer-events-none">
+                        </div>
+                        <div class="relative z-10">
+                            <h3 class="text-2xl font-bold mb-6 md:mb-8">Informasi Kontak</h3>
+                            <div class="grid grid-cols-1 gap-4 md:gap-5">
+                                <div
+                                    class="group flex items-start gap-4 p-4 md:p-5 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 transition-all cursor-default">
                                     <div
-                                        class="group flex items-start gap-4 p-4 md:p-5 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 transition-all cursor-default">
-                                        <div
-                                            class="bg-blue-500/20 p-3 rounded-xl group-hover:bg-blue-500/40 transition-colors">
-                                            <span class="material-symbols-outlined text-white">call</span>
-                                        </div>
-                                        <div>
-                                            <p class="text-xs md:text-sm text-blue-200 font-medium mb-1">Telepon &amp;
-                                                WhatsApp
-                                            </p>
-                                            <a class="text-base md:text-lg font-bold text-white hover:text-blue-300 transition-colors block"
-                                                href="tel:+622112345678">+62 21 1234 5678</a>
-                                        </div>
+                                        class="bg-blue-500/20 p-3 rounded-xl group-hover:bg-blue-500/40 transition-colors">
+                                        <span class="material-symbols-outlined text-white">call</span>
                                     </div>
+                                    <div>
+                                        <p class="text-xs md:text-sm text-blue-200 font-medium mb-1">Telepon
+                                            &amp;
+                                            WhatsApp
+                                        </p>
+                                        <a class="text-base md:text-lg font-bold text-white hover:text-blue-300 transition-colors block"
+                                            href="tel:+622112345678">+62 21 1234 5678</a>
+                                    </div>
+                                </div>
+                                <div
+                                    class="group flex items-start gap-4 p-4 md:p-5 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 transition-all cursor-default">
                                     <div
-                                        class="group flex items-start gap-4 p-4 md:p-5 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 transition-all cursor-default">
-                                        <div
-                                            class="bg-blue-500/20 p-3 rounded-xl group-hover:bg-blue-500/40 transition-colors">
-                                            <span class="material-symbols-outlined text-white">mail</span>
-                                        </div>
-                                        <div>
-                                            <p class="text-xs md:text-sm text-blue-200 font-medium mb-1">Email Inquiry
-                                            </p>
-                                            <a class="text-base md:text-lg font-bold text-white hover:text-blue-300 transition-colors block"
-                                                href="mailto:marketing@reksakon.com">marketing@reksakon.com</a>
-                                        </div>
+                                        class="bg-blue-500/20 p-3 rounded-xl group-hover:bg-blue-500/40 transition-colors">
+                                        <span class="material-symbols-outlined text-white">mail</span>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs md:text-sm text-blue-200 font-medium mb-1">Email
+                                            Inquiry
+                                        </p>
+                                        <a class="text-base md:text-lg font-bold text-white hover:text-blue-300 transition-colors block"
+                                            href="mailto:marketing@reksakon.com">marketing@reksakon.com</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="relative z-10 mt-10">
-                                <div
-                                    class="rounded-2xl overflow-hidden h-40 md:h-48 w-full relative border border-white/20 shadow-lg group">
-                                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                                        style='background-image: url("https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=2906&auto=format&fit=crop");'>
-                                    </div>
+                        </div>
+                        <div class="relative z-10 mt-10">
+                            <div
+                                class="rounded-2xl overflow-hidden h-40 md:h-48 w-full relative border border-white/20 shadow-lg group">
+                                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                                    style='background-image: url("https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=2906&auto=format&fit=crop");'>
+                                </div>
+                                <div class="absolute inset-0 bg-primary/40 group-hover:bg-primary/20 transition-colors">
+                                </div>
+                                <div class="absolute inset-0 flex flex-col items-center justify-center p-4">
                                     <div
-                                        class="absolute inset-0 bg-primary/40 group-hover:bg-primary/20 transition-colors">
-                                    </div>
-                                    <div class="absolute inset-0 flex flex-col items-center justify-center p-4">
-                                        <div
-                                            class="bg-white/90 dark:bg-black/80 backdrop-blur-md text-primary dark:text-white px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 shadow-xl transform group-hover:scale-105 transition-all text-center">
-                                            <span
-                                                class="material-symbols-outlined text-sm text-red-500">location_on</span>
-                                            <span>Lihat Lokasi di Google Maps</span>
-                                        </div>
+                                        class="bg-white/90 dark:bg-black/80 backdrop-blur-md text-primary dark:text-white px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 shadow-xl transform group-hover:scale-105 transition-all text-center">
+                                        <span class="material-symbols-outlined text-sm text-red-500">location_on</span>
+                                        <span>Lihat Lokasi di Google Maps</span>
                                     </div>
                                 </div>
                             </div>
@@ -772,85 +920,86 @@
                 </div>
             </div>
         </div>
+    </div>
 
-        <footer class="w-full bg-[#0f1823] text-white pt-16 pb-8 border-t border-gray-800">
-            <div class="layout-container flex w-full justify-center px-4 md:px-10">
-                <div class="max-w-[1280px] w-full flex flex-col gap-12">
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-                        <div class="flex flex-col gap-4">
-                            <div class="flex items-center gap-3">
-                                <span class="material-symbols-outlined text-3xl text-white">engineering</span>
-                                <span class="text-xl font-bold">Rekayasa Sarana Konstruksi</span>
-                            </div>
-                            <p class="text-gray-400 text-sm leading-relaxed">
-                                Mitra berharga Anda yang tumbuh dengan pengetahuan luas dalam konstruksi dan
-                                rekayasa.
-                            </p>
-                            <div class="flex gap-4 mt-2">
-                                <a class="text-gray-400 hover:text-white transition-colors" href="#"><span
-                                        class="material-symbols-outlined">public</span></a>
-                                <a class="text-gray-400 hover:text-white transition-colors" href="#"><span
-                                        class="material-symbols-outlined">mail</span></a>
-                                <a class="text-gray-400 hover:text-white transition-colors" href="#"><span
-                                        class="material-symbols-outlined">call</span></a>
-                            </div>
+    <footer class="w-full bg-[#0f1823] text-white pt-16 pb-8 border-t border-gray-800">
+        <div class="layout-container flex w-full justify-center px-4 md:px-10">
+            <div class="max-w-[1280px] w-full flex flex-col gap-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-3xl text-white">engineering</span>
+                            <span class="text-xl font-bold">Rekayasa Sarana Konstruksi</span>
                         </div>
-                        <div class="flex flex-col gap-4">
-                            <h4 class="text-lg font-bold">Head Office</h4>
-                            <div class="flex flex-col gap-2 text-sm text-gray-400">
-                                <p>Jalan Komplek Palem Lestari</p>
-                                <p>Ruko Galaxy Cengkareng Barat</p>
-                                <p>Cengkareng Kota Adm, Jakarta Barat</p>
-                                <p>DKI Jakarta</p>
-                                <p class="mt-2 text-white"><span
-                                        class="material-symbols-outlined text-sm align-middle mr-1">mail</span>
-                                    marketing@reksakon.com</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-col gap-4">
-                            <h4 class="text-lg font-bold">Operational Office</h4>
-                            <div class="flex flex-col gap-2 text-sm text-gray-400">
-                                <p>Jalan Kh Syafi'i IV/77 Dahanrejo</p>
-                                <p>Rt 001 Rw 002 Kec. Kebomas</p>
-                                <p>Kab. Gresik - Jawa Timur</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-col gap-4">
-                            <h4 class="text-lg font-bold">Tautan Cepat</h4>
-                            <div class="flex flex-col gap-2 text-sm text-gray-400">
-                                <a class="hover:text-white transition-colors" href="index.html">Beranda</a>
-                                <a class="hover:text-white transition-colors" href="layanan.html">Layanan</a>
-                                <a class="hover:text-white transition-colors" href="portofolio.html">Proyek</a>
-                                <a class="hover:text-white transition-colors" href="klien.html">Klien</a>
-                                <a class="hover:text-white transition-colors" href="pengalaman-kerja.html">Pengalaman
-                                    Kerja</a>
-                            </div>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Mitra berharga Anda yang tumbuh dengan pengetahuan luas dalam konstruksi dan
+                            rekayasa.
+                        </p>
+                        <div class="flex gap-4 mt-2">
+                            <a class="text-gray-400 hover:text-white transition-colors" href="#"><span
+                                    class="material-symbols-outlined">public</span></a>
+                            <a class="text-gray-400 hover:text-white transition-colors" href="#"><span
+                                    class="material-symbols-outlined">mail</span></a>
+                            <a class="text-gray-400 hover:text-white transition-colors" href="#"><span
+                                    class="material-symbols-outlined">call</span></a>
                         </div>
                     </div>
-                    <div
-                        class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
-                        <p>© 2024 PT Rekayasa Sarana Konstruksi. Hak Cipta Dilindungi.</p>
-                        <div class="flex gap-6">
-                            <a class="hover:text-gray-300" href="#">Kebijakan Privasi</a>
-                            <a class="hover:text-gray-300" href="#">Syarat &amp; Ketentuan</a>
+                    <div class="flex flex-col gap-4">
+                        <h4 class="text-lg font-bold">Head Office</h4>
+                        <div class="flex flex-col gap-2 text-sm text-gray-400">
+                            <p>Jalan Komplek Palem Lestari</p>
+                            <p>Ruko Galaxy Cengkareng Barat</p>
+                            <p>Cengkareng Kota Adm, Jakarta Barat</p>
+                            <p>DKI Jakarta</p>
+                            <p class="mt-2 text-white"><span
+                                    class="material-symbols-outlined text-sm align-middle mr-1">mail</span>
+                                marketing@reksakon.com</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h4 class="text-lg font-bold">Operational Office</h4>
+                        <div class="flex flex-col gap-2 text-sm text-gray-400">
+                            <p>Jalan Kh Syafi'i IV/77 Dahanrejo</p>
+                            <p>Rt 001 Rw 002 Kec. Kebomas</p>
+                            <p>Kab. Gresik - Jawa Timur</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h4 class="text-lg font-bold">Tautan Cepat</h4>
+                        <div class="flex flex-col gap-2 text-sm text-gray-400">
+                            <a class="hover:text-white transition-colors" href="index.html">Beranda</a>
+                            <a class="hover:text-white transition-colors" href="layanan.html">Layanan</a>
+                            <a class="hover:text-white transition-colors" href="portofolio.html">Proyek</a>
+                            <a class="hover:text-white transition-colors" href="klien.html">Klien</a>
+                            <a class="hover:text-white transition-colors" href="pengalaman-kerja.html">Pengalaman
+                                Kerja</a>
                         </div>
                     </div>
                 </div>
+                <div
+                    class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+                    <p>© 2024 PT Rekayasa Sarana Konstruksi. Hak Cipta Dilindungi.</p>
+                    <div class="flex gap-6">
+                        <a class="hover:text-gray-300" href="#">Kebijakan Privasi</a>
+                        <a class="hover:text-gray-300" href="#">Syarat &amp; Ketentuan</a>
+                    </div>
+                </div>
             </div>
-        </footer>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init({
-                duration: 800,
-                once: true,
-                offset: 100,
-                easing: 'ease-out-cubic'
-            });
-        </script>
-        <script src="animations.js"></script>
-        <script src="mobile-menu.js"></script>
-        <script src="form-handler.js"></script>
-        <script src="dark-mode.js"></script>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+            easing: 'ease-out-cubic'
+        });
+    </script>
+    <script src="animations.js"></script>
+    <script src="mobile-menu.js"></script>
+    <script src="form-handler.js"></script>
+    <script src="dark-mode.js"></script>
 </body>
 
 </html>
