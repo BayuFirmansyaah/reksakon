@@ -9,6 +9,7 @@
     transform: translateY(0);
 }
 
+/* Marquee animation */
 @keyframes marquee {
     0% {
         transform: translateX(0);
@@ -22,41 +23,9 @@
 .animate-marquee {
     display: flex;
     width: max-content;
-    animation: marquee 40s linear infinite;
+    animation: marquee 30s linear infinite;
 }
 
 .animate-marquee:hover {
     animation-play-state: paused;
-}
-
-.logo-card {
-    flex: 0 0 280px;
-    padding: 1.5rem 2rem;
-    background: white;
-    border-radius: 1rem;
-    border: 1px solid #f1f5f9;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    transition: all 0.3s ease;
-    filter: grayscale(100%);
-    opacity: 0.6;
-}
-
-.dark .logo-card {
-    background: #1a2634;
-    border-color: #2d3748;
-}
-
-.logo-card:hover {
-    filter: grayscale(0%);
-    opacity: 1;
-    border-color: #003366;
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px -5px rgba(0, 51, 102, 0.1);
-}
-
-.dark .logo-card:hover {
-    border-color: #3182ce;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
 }

@@ -5,9 +5,13 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Halaman Detail Kontak Rekayasa Sarana</title>
+    <link rel="icon" href="logo.png" type="image/png">
+    <meta name="description" content="Hubungi PT Rekayasa Sarana Konstruksi untuk kebutuhan proyek konstruksi Anda.">
+    <meta property="og:title" content="Kontak - PT Rekayasa Sarana Konstruksi">
+    <meta property="og:description" content="Hubungi tim kami untuk diskusi proyek dan kemitraan.">
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;display=swap"
         rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
@@ -21,8 +25,10 @@
                 extend: {
                     colors: {
                         "primary": "#002047",
-                        "background-light": "#f5f7f8",
-                        "background-dark": "#0f1823",
+                        "accent": "#E34B31",
+                        "accent-dark": "#C83E28",
+                        "background-light": "#ffffff",
+                        "footer-dark": "#263545",
                     },
                     fontFamily: {
                         "display": ["Inter", "sans-serif"]
@@ -45,335 +51,367 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
+
+        header.navbar-transparent {
+            background: transparent !important;
+            border-bottom-color: transparent !important;
+        }
+
+        header.navbar-solid {
+            background: white !important;
+            border-bottom-color: #f0f2f5 !important;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        }
+
+        header.navbar-transparent .nav-link,
+        header.navbar-transparent .nav-brand {
+            color: white !important;
+        }
+
+        header.navbar-transparent .mobile-toggle {
+            color: white !important;
+        }
+
+        header.navbar-solid .nav-link {
+            color: #3a4a5c !important;
+        }
+
+        header.navbar-solid .nav-brand {
+            color: #002047 !important;
+        }
+
+        .hatch-plus {
+            color: #E34B31;
+            font-weight: 300;
+            margin-right: 0.35em;
+        }
     </style>
     <link rel="stylesheet" href="animations.css">
 </head>
 
-<body class="bg-white text-[#101418] dark:bg-background-dark dark:text-white font-display antialiased">
+<body class="bg-background-light text-[#101418] font-display antialiased">
     <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
-        <header
-            class="sticky top-0 z-50 bg-white dark:bg-background-dark border-b border-solid border-b-[#f0f2f5] dark:border-b-gray-800">
+
+        <!-- Navbar -->
+        <header id="main-navbar"
+            class="navbar-transparent fixed top-0 left-0 right-0 z-50 border-b border-solid border-b-transparent transition-all duration-300">
             <div class="layout-container flex w-full justify-center">
                 <div
-                    class="w-full max-w-[1280px] px-4 md:px-10 py-3 flex items-center justify-between whitespace-nowrap">
-                    <div class="flex items-center gap-4 text-primary dark:text-white">
-                        <img src="logo.png" alt="Rekayasa Sarana Konstruksi Logo" class="h-10 w-auto">
-                        <h2 class="text-primary dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">
+                    class="w-full max-w-[1280px] px-4 md:px-10 py-4 flex items-center justify-between whitespace-nowrap">
+                    <div class="flex items-center gap-3">
+                        <img src="logo.png" alt="Rekayasa Sarana Konstruksi Logo" class="h-9 w-auto">
+                        <h2 class="nav-brand text-white text-lg font-bold leading-tight tracking-[-0.015em]">
                             Rekayasa Sarana Konstruksi</h2>
                     </div>
                     <div class="hidden lg:flex items-center gap-8">
-                        <nav class="flex items-center gap-6">
-                            <a class="text-[#101418] dark:text-gray-200 text-sm font-medium hover:text-primary dark:hover:text-blue-400 transition-colors"
-                                href="index.html">Beranda</a>
-                            <a class="text-[#101418] dark:text-gray-200 text-sm font-medium hover:text-primary dark:hover:text-blue-400 transition-colors"
-                                href="layanan.html">Layanan</a>
-                            <a class="text-[#101418] dark:text-gray-200 text-sm font-medium hover:text-primary dark:hover:text-blue-400 transition-colors"
-                                href="portofolio.html">Proyek</a>
-                            <a class="text-[#101418] dark:text-gray-200 text-sm font-medium hover:text-primary dark:hover:text-blue-400 transition-colors"
-                                href="klien.html">Klien</a>
-                            <a class="text-[#101418] dark:text-gray-200 text-sm font-medium hover:text-primary dark:hover:text-blue-400 transition-colors"
-                                href="pengalaman-kerja.html">Pengalaman Kerja</a>
+                        <nav class="flex items-center gap-7">
+                            <a class="nav-link text-white/90 text-sm font-medium hover:text-white transition-colors"
+                                href="index.html">beranda</a>
+                            <a class="nav-link text-white/90 text-sm font-medium hover:text-white transition-colors"
+                                href="layanan.html">layanan</a>
+                            <a class="nav-link text-white/90 text-sm font-medium hover:text-white transition-colors"
+                                href="portofolio.html">proyek</a>
+                            <a class="nav-link text-white/90 text-sm font-medium hover:text-white transition-colors"
+                                href="klien.html">klien</a>
+                            <a class="nav-link text-white/90 text-sm font-medium hover:text-white transition-colors"
+                                href="pengalaman-kerja.html">pengalaman kerja</a>
                         </nav>
                         <a href="kontak.html"
-                            class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary hover:bg-[#001835] transition-colors text-white text-sm font-bold leading-normal tracking-[0.015em] shadow-md hover:shadow-lg">
-                            <span class="truncate">Hubungi Kami</span>
+                            class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-accent hover:bg-accent-dark transition-colors text-white text-sm font-semibold leading-normal tracking-wide">
+                            <span class="truncate">hubungi kami</span>
                         </a>
-                        <button id="dark-mode-toggle"
-                            class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
-                            title="Toggle Dark Mode">
-                            <span id="dark-mode-icon"
-                                class="material-symbols-outlined text-[#101418] dark:text-white">dark_mode</span>
-                        </button>
                     </div>
-                    <button id="mobile-menu-toggle" class="lg:hidden text-[#101418] dark:text-white cursor-pointer">
+                    <button id="mobile-menu-toggle" class="mobile-toggle lg:hidden text-white cursor-pointer">
                         <span class="material-symbols-outlined">menu</span>
                     </button>
                 </div>
             </div>
         </header>
+
         <!-- Mobile Menu Overlay -->
         <div id="mobile-menu-overlay"
             class="fixed inset-0 bg-black/50 z-[60] opacity-0 pointer-events-none transition-opacity duration-300">
         </div>
         <!-- Mobile Menu Panel -->
         <div id="mobile-menu"
-            class="fixed top-0 right-0 h-full w-72 bg-white dark:bg-background-dark z-[70] shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
-            <div class="flex items-center justify-between p-4 border-b border-gray-100 dark:border-gray-800">
-                <span class="text-primary dark:text-white font-bold text-lg">Menu</span>
-                <button id="mobile-menu-close"
-                    class="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-white cursor-pointer">
+            class="fixed top-0 right-0 h-full w-72 bg-white z-[70] shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+            <div class="flex items-center justify-between p-4 border-b border-gray-100">
+                <span class="text-primary font-bold text-lg">Menu</span>
+                <button id="mobile-menu-close" class="text-gray-500 hover:text-primary cursor-pointer">
                     <span class="material-symbols-outlined">close</span>
                 </button>
             </div>
             <nav class="flex flex-col p-4 gap-1">
-                <a class="px-4 py-3 rounded-lg text-sm font-medium text-[#101418] dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
-                    href="index.html">Beranda</a>
-                <a class="px-4 py-3 rounded-lg text-sm font-medium text-[#101418] dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
-                    href="layanan.html">Layanan</a>
-                <a class="px-4 py-3 rounded-lg text-sm font-medium text-[#101418] dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
-                    href="portofolio.html">Proyek</a>
-                <a class="px-4 py-3 rounded-lg text-sm font-medium text-[#101418] dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
-                    href="klien.html">Klien</a>
-                <a class="px-4 py-3 rounded-lg text-sm font-medium text-[#101418] dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
-                    href="pengalaman-kerja.html">Pengalaman Kerja</a>
+                <a class="px-4 py-3 rounded-lg text-sm font-medium text-[#3a4a5c] hover:bg-gray-50 transition-colors"
+                    href="index.html">beranda</a>
+                <a class="px-4 py-3 rounded-lg text-sm font-medium text-[#3a4a5c] hover:bg-gray-50 transition-colors"
+                    href="layanan.html">layanan</a>
+                <a class="px-4 py-3 rounded-lg text-sm font-medium text-[#3a4a5c] hover:bg-gray-50 transition-colors"
+                    href="portofolio.html">proyek</a>
+                <a class="px-4 py-3 rounded-lg text-sm font-medium text-[#3a4a5c] hover:bg-gray-50 transition-colors"
+                    href="klien.html">klien</a>
+                <a class="px-4 py-3 rounded-lg text-sm font-medium text-[#3a4a5c] hover:bg-gray-50 transition-colors"
+                    href="pengalaman-kerja.html">pengalaman kerja</a>
             </nav>
-            <div class="mt-auto p-4 border-t border-gray-100 dark:border-gray-800">
+            <div class="mt-auto p-4 border-t border-gray-100">
                 <a href="kontak.html"
-                    class="flex w-full items-center justify-center rounded-lg h-10 px-5 bg-primary hover:bg-[#001835] transition-colors text-white text-sm font-bold shadow-md">
-                    Hubungi Kami
+                    class="flex w-full items-center justify-center rounded-full h-10 px-5 bg-accent hover:bg-accent-dark transition-colors text-white text-sm font-semibold shadow-md">
+                    hubungi kami
                 </a>
             </div>
         </div>
-        <div class="w-full">
-            <div class="relative flex min-h-[500px] md:min-h-[600px] flex-col justify-center bg-cover bg-center bg-no-repeat overflow-hidden"
-                style="background-image: linear-gradient(rgba(0, 15, 40, 0.75), rgba(0, 15, 40, 0.9)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5');">
 
-                <!-- Animated Background Elements -->
-                <div
-                    class="absolute top-0 right-0 w-1/3 h-full bg-blue-500/10 -skew-x-12 transform translate-x-1/2 hidden lg:block">
-                </div>
+        <main class="flex-grow">
+            <!-- Hero Section -->
+            <div class="relative min-h-[500px] md:min-h-[600px] flex flex-col justify-center overflow-hidden"
+                style="background-image: linear-gradient(rgba(0, 15, 40, 0.55), rgba(0, 15, 40, 0.7)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5'); background-size: cover; background-position: center;">
 
-                <div class="layout-container relative z-10 flex w-full justify-center px-4 md:px-10 py-16 md:py-24">
+                <div class="relative z-10 flex w-full justify-center px-4 md:px-10 py-32 md:py-40">
                     <div class="max-w-[1280px] w-full flex flex-col gap-6" data-aos="fade-up" data-aos-duration="1000">
                         <div
-                            class="flex items-center gap-2 text-blue-300 text-sm font-bold uppercase tracking-widest mb-2">
-                            <a class="hover:text-white transition-colors" href="index.html">Beranda</a>
-                            <span class="material-symbols-outlined text-xs">chevron_right</span>
-                            <span class="text-white">Hubungi Kami</span>
+                            class="inline-flex items-center gap-2 text-white/60 font-semibold uppercase tracking-[0.15em] text-xs">
+                            <span class="w-8 h-[2px] bg-accent"></span>
+                            hubungi kami
                         </div>
-                        <h1
-                            class="text-white text-5xl md:text-7xl font-black leading-[1.1] tracking-tight text-center md:text-left">
-                            Mari Berdiskusi <br class="hidden md:block">
-                            <span
-                                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200">Tentang
-                                Proyek Anda</span>
+                        <h1 class="text-white text-4xl md:text-6xl lg:text-7xl font-light leading-[1.1] tracking-tight">
+                            mari berdiskusi<br class="hidden md:block">
+                            <span class="font-bold">tentang proyek anda</span>
                         </h1>
-                        <p
-                            class="text-gray-300 text-lg md:text-xl font-normal leading-relaxed max-w-[700px] text-center md:text-left mx-auto md:mx-0">
-                            Tim kami siap mendengarkan kebutuhan teknis Anda dan memberikan solusi yang paling efektif
-                            dan efisien.
+                        <p class="text-white/70 text-base md:text-lg font-normal leading-relaxed max-w-[700px]">
+                            <span class="hatch-plus text-xl">+</span>tim kami siap mendengarkan kebutuhan teknis Anda
+                            dan memberikan solusi yang paling efektif dan efisien.
                         </p>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="w-full bg-white dark:bg-background-dark py-12 md:py-20">
-            <div class="layout-container flex w-full justify-center px-4 md:px-10">
-                <div class="max-w-[1280px] w-full">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-                        <div class="flex flex-col gap-8 order-2 lg:order-1">
-                            <div class="flex flex-col gap-6">
-                                <h3 class="text-2xl font-bold text-primary dark:text-white flex items-center gap-3"
-                                    data-aos="fade-right">
-                                    <div
-                                        class="w-10 h-10 rounded-full bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center">
-                                        <span
-                                            class="material-symbols-outlined text-blue-600 dark:text-blue-400">location_on</span>
+
+            <!-- Contact Section -->
+            <div class="w-full bg-white py-12 md:py-20">
+                <div class="layout-container flex w-full justify-center px-4 md:px-10">
+                    <div class="max-w-[1280px] w-full">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+                            <!-- Left: Map + Offices -->
+                            <div class="flex flex-col gap-8 order-2 lg:order-1">
+                                <div class="flex flex-col gap-6">
+                                    <h3 class="text-primary text-2xl font-bold flex items-center gap-3"
+                                        data-aos="fade-right">
+                                        <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
+                                            <span class="material-symbols-outlined text-accent">location_on</span>
+                                        </div>
+                                        lokasi kantor
+                                    </h3>
+                                    <div class="w-full h-[450px] bg-white rounded-2xl overflow-hidden shadow-soft border border-gray-100 relative"
+                                        data-aos="zoom-in">
+                                        <iframe allowfullscreen="" height="100%" loading="lazy"
+                                            referrerpolicy="no-referrer-when-downgrade"
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.895311822557!2d112.60742127581179!3d-7.137838570087754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e77ff961947b0e1%3A0xc4e591c28c688849!2sJl.%20KH.%20Syafii%20No.77%2C%20Suci%2C%20Kec.%20Kebomas%2C%20Kabupaten%20Gresik%2C%20Jawa%20Timur%2061121!5e0!3m2!1sid!2sid!4v1714567890123!5m2!1sid!2sid"
+                                            style="border:0;" width="100%"></iframe>
                                     </div>
-                                    Lokasi Kantor
-                                </h3>
-                                <div class="w-full h-[450px] bg-white rounded-2xl overflow-hidden shadow-soft border border-gray-100 dark:border-gray-700 relative group hover:shadow-card transition-all duration-300"
-                                    data-aos="zoom-in">
-                                    <iframe allowfullscreen="" height="100%" loading="lazy"
-                                        referrerpolicy="no-referrer-when-downgrade"
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.895311822557!2d112.60742127581179!3d-7.137838570087754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e77ff961947b0e1%3A0xc4e591c28c688849!2sJl.%20KH.%20Syafii%20No.77%2C%20Suci%2C%20Kec.%20Kebomas%2C%20Kabupaten%20Gresik%2C%20Jawa%20Timur%2061121!5e0!3m2!1sid!2sid!4v1714567890123!5m2!1sid!2sid"
-                                        style="border:0;" width="100%"></iframe>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div class="p-8 rounded-2xl bg-white border border-gray-100 flex flex-col gap-5 shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-1"
+                                        data-aos="fade-up" data-aos-delay="100">
+                                        <div
+                                            class="w-14 h-14 rounded-xl bg-blue-50 flex items-center justify-center text-primary">
+                                            <span class="material-symbols-outlined text-3xl">business</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-lg font-bold text-primary mb-3">Head Office</h4>
+                                            <p class="text-sm text-[#5e738d] leading-relaxed font-medium">
+                                                Jalan Komplek Palem Lestari<br />
+                                                Ruko Galaxy Cengkareng Barat<br />
+                                                Cengkareng Kota Adm, Jakarta Barat<br />
+                                                DKI Jakarta
+                                            </p>
+                                        </div>
+                                        <div class="mt-auto pt-5 border-t border-gray-100">
+                                            <a class="flex items-center gap-3 text-accent font-bold text-sm hover:text-accent-dark transition-colors group"
+                                                href="tel:+622112345678">
+                                                <span
+                                                    class="material-symbols-outlined text-xl group-hover:scale-110 transition-transform">call</span>
+                                                +62 21 1234 5678
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="p-8 rounded-2xl bg-white border border-gray-100 flex flex-col gap-5 shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-1"
+                                        data-aos="fade-up" data-aos-delay="200">
+                                        <div
+                                            class="w-14 h-14 rounded-xl bg-blue-50 flex items-center justify-center text-primary">
+                                            <span class="material-symbols-outlined text-3xl">engineering</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-lg font-bold text-primary mb-3">Operational Office</h4>
+                                            <p class="text-sm text-[#5e738d] leading-relaxed font-medium">
+                                                Jalan Kh Syafi'i IV/77 Dahanrejo<br />
+                                                Rt 001 Rw 002 Kec. Kebomas<br />
+                                                Kab. Gresik - Jawa Timur
+                                            </p>
+                                        </div>
+                                        <div class="mt-auto pt-5 border-t border-gray-100">
+                                            <a class="flex items-center gap-3 text-accent font-bold text-sm hover:text-accent-dark transition-colors group"
+                                                href="tel:+623112345678">
+                                                <span
+                                                    class="material-symbols-outlined text-xl group-hover:scale-110 transition-transform">call</span>
+                                                +62 31 1234 5678
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="p-8 rounded-2xl bg-white dark:bg-[#1a2634] border border-gray-100 dark:border-gray-700 flex flex-col gap-5 shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-1"
-                                    data-aos="fade-up" data-aos-delay="100">
+
+                            <!-- Right: Contact Form -->
+                            <div class="w-full order-1 lg:order-2 h-full">
+                                <div class="w-full" data-aos="fade-left">
                                     <div
-                                        class="w-14 h-14 rounded-xl bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-primary dark:text-blue-400">
-                                        <span class="material-symbols-outlined text-3xl">business</span>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-lg font-bold text-primary dark:text-white mb-3">Head Office</h4>
-                                        <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed font-medium">
-                                            Jalan Komplek Palem Lestari<br />
-                                            Ruko Galaxy Cengkareng Barat<br />
-                                            Cengkareng Kota Adm, Jakarta Barat<br />
-                                            DKI Jakarta
-                                        </p>
-                                    </div>
-                                    <div class="mt-auto pt-5 border-t border-gray-100 dark:border-gray-600">
-                                        <a class="flex items-center gap-3 text-primary dark:text-blue-400 font-bold text-sm hover:text-blue-600 transition-colors group"
-                                            href="tel:+622112345678">
-                                            <span
-                                                class="material-symbols-outlined text-xl group-hover:scale-110 transition-transform">call</span>
-                                            +62 21 1234 5678
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="p-8 rounded-2xl bg-white dark:bg-[#1a2634] border border-gray-100 dark:border-gray-700 flex flex-col gap-5 shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-1"
-                                    data-aos="fade-up" data-aos-delay="200">
-                                    <div
-                                        class="w-14 h-14 rounded-xl bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-primary dark:text-blue-400">
-                                        <span class="material-symbols-outlined text-3xl">engineering</span>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-lg font-bold text-primary dark:text-white mb-3">Operational
-                                            Office</h4>
-                                        <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed font-medium">
-                                            Jalan Kh Syafi'i IV/77 Dahanrejo<br />
-                                            Rt 001 Rw 002 Kec. Kebomas<br />
-                                            Kab. Gresik - Jawa Timur
-                                        </p>
-                                    </div>
-                                    <div class="mt-auto pt-5 border-t border-gray-100 dark:border-gray-600">
-                                        <a class="flex items-center gap-3 text-primary dark:text-blue-400 font-bold text-sm hover:text-blue-600 transition-colors group"
-                                            href="tel:+623112345678">
-                                            <span
-                                                class="material-symbols-outlined text-xl group-hover:scale-110 transition-transform">call</span>
-                                            +62 31 1234 5678
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-full order-1 lg:order-2 h-full">
-                            <!-- Contact Form -->
-                            <div class="w-full" data-aos="fade-left">
-                                <div
-                                    class="bg-white dark:bg-[#1a2634] p-8 md:p-10 rounded-2xl shadow-card border border-gray-100 dark:border-gray-700 h-full flex flex-col">
-                                    <div class="mb-8 pb-6 border-b border-gray-100 dark:border-gray-700">
-                                        <h2 class="text-2xl md:text-3xl font-bold text-primary dark:text-white mb-3">
-                                            Kirim
-                                            Pesan Langsung</h2>
-                                        <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Silakan isi
-                                            formulir di bawah ini dan tim kami akan segera menghubungi Anda.</p>
-                                    </div>
-                                    <form class="flex flex-col gap-6 flex-grow">
-                                        <div class="flex flex-col gap-2">
-                                            <label class="text-sm font-bold text-primary dark:text-gray-200"
-                                                for="contact-name">Nama Lengkap</label>
-                                            <input
-                                                class="w-full px-5 py-3.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-[#15202b] text-primary dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-100 focus:border-blue-500 dark:focus:bg-[#1a2634] transition-all"
-                                                id="contact-name" placeholder="Nama Anda" type="text" />
+                                        class="bg-white p-8 md:p-10 rounded-2xl shadow-card border border-gray-100 h-full flex flex-col">
+                                        <div class="mb-8 pb-6 border-b border-gray-100">
+                                            <h2 class="text-2xl md:text-3xl font-bold text-primary mb-3">
+                                                kirim pesan langsung</h2>
+                                            <p class="text-[#5e738d] text-sm leading-relaxed">
+                                                <span class="hatch-plus text-lg">+</span>silakan isi formulir di
+                                                bawah ini dan tim kami akan segera menghubungi Anda.
+                                            </p>
                                         </div>
-                                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                        <form class="flex flex-col gap-6 flex-grow">
                                             <div class="flex flex-col gap-2">
-                                                <label class="text-sm font-bold text-primary dark:text-gray-200"
-                                                    for="contact-email">Email</label>
+                                                <label class="text-sm font-bold text-primary" for="contact-name">Nama
+                                                    Lengkap</label>
                                                 <input
-                                                    class="w-full px-5 py-3.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-[#15202b] text-primary dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-100 focus:border-blue-500 dark:focus:bg-[#1a2634] transition-all"
-                                                    id="contact-email" placeholder="email@anda.com" type="email" />
+                                                    class="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50 text-primary placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all"
+                                                    id="contact-name" placeholder="Nama Anda" type="text" />
                                             </div>
-                                            <div class="flex flex-col gap-2">
-                                                <label class="text-sm font-bold text-primary dark:text-gray-200"
-                                                    for="contact-company">Perusahaan</label>
-                                                <input
-                                                    class="w-full px-5 py-3.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-[#15202b] text-primary dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-100 focus:border-blue-500 dark:focus:bg-[#1a2634] transition-all"
-                                                    id="contact-company" placeholder="Nama Perusahaan" type="text" />
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-col gap-2">
-                                            <label class="text-sm font-bold text-primary dark:text-gray-200"
-                                                for="contact-subject">Subjek</label>
-                                            <div class="relative">
-                                                <select
-                                                    class="w-full px-5 py-3.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-[#15202b] text-primary dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-100 focus:border-blue-500 dark:focus:bg-[#1a2634] transition-all appearance-none cursor-pointer"
-                                                    id="contact-subject">
-                                                    <option disabled="" selected="" value="">Pilih Topik Diskusi
-                                                    </option>
-                                                    <option value="project">Pertanyaan Proyek Baru</option>
-                                                    <option value="partnership">Kemitraan Strategis</option>
-                                                    <option value="career">Karir &amp; Lowongan</option>
-                                                    <option value="other">Lainnya</option>
-                                                </select>
-                                                <div
-                                                    class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-5 text-gray-500">
-                                                    <span class="material-symbols-outlined text-xl">expand_more</span>
+                                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                                <div class="flex flex-col gap-2">
+                                                    <label class="text-sm font-bold text-primary"
+                                                        for="contact-email">Email</label>
+                                                    <input
+                                                        class="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50 text-primary placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all"
+                                                        id="contact-email" placeholder="email@anda.com" type="email" />
+                                                </div>
+                                                <div class="flex flex-col gap-2">
+                                                    <label class="text-sm font-bold text-primary"
+                                                        for="contact-company">Perusahaan</label>
+                                                    <input
+                                                        class="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50 text-primary placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all"
+                                                        id="contact-company" placeholder="Nama Perusahaan"
+                                                        type="text" />
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="flex flex-col gap-2 flex-grow">
-                                            <label class="text-sm font-bold text-primary dark:text-gray-200"
-                                                for="contact-message">Pesan</label>
-                                            <textarea
-                                                class="w-full px-5 py-3.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-[#15202b] text-primary dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-100 focus:border-blue-500 dark:focus:bg-[#1a2634] transition-all min-h-[150px] resize-y"
-                                                id="contact-message"
-                                                placeholder="Tuliskan detail pertanyaan atau kebutuhan Anda di sini..."></textarea>
-                                        </div>
-                                        <button
-                                            class="mt-4 w-full px-8 py-4 bg-primary hover:bg-[#003066] text-white font-bold rounded-xl transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-blue-900/20 transform hover:-translate-y-0.5 active:translate-y-0">
-                                            <span>Kirim Pesan</span>
-                                            <span class="material-symbols-outlined text-sm">send</span>
-                                        </button>
-                                    </form>
+                                            <div class="flex flex-col gap-2">
+                                                <label class="text-sm font-bold text-primary"
+                                                    for="contact-subject">Subjek</label>
+                                                <div class="relative">
+                                                    <select
+                                                        class="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50 text-primary placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all appearance-none cursor-pointer"
+                                                        id="contact-subject">
+                                                        <option disabled="" selected="" value="">Pilih Topik Diskusi
+                                                        </option>
+                                                        <option value="project">Pertanyaan Proyek Baru</option>
+                                                        <option value="partnership">Kemitraan Strategis</option>
+                                                        <option value="career">Karir &amp; Lowongan</option>
+                                                        <option value="other">Lainnya</option>
+                                                    </select>
+                                                    <div
+                                                        class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-5 text-gray-500">
+                                                        <span
+                                                            class="material-symbols-outlined text-xl">expand_more</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex flex-col gap-2 flex-grow">
+                                                <label class="text-sm font-bold text-primary"
+                                                    for="contact-message">Pesan</label>
+                                                <textarea
+                                                    class="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50 text-primary placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all min-h-[150px] resize-y"
+                                                    id="contact-message"
+                                                    placeholder="Tuliskan detail pertanyaan atau kebutuhan Anda di sini..."></textarea>
+                                            </div>
+                                            <button
+                                                class="mt-4 w-full px-8 py-4 bg-accent hover:bg-accent-dark text-white font-semibold rounded-full transition-all duration-300 flex items-center justify-center gap-2 shadow-lg transform hover:-translate-y-0.5 active:translate-y-0">
+                                                <span>kirim pesan</span>
+                                                <span class="material-symbols-outlined text-sm">send</span>
+                                            </button>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="w-full bg-gray-50 dark:bg-[#0b121b] py-20 border-t border-gray-100 dark:border-gray-800">
+
+            <!-- FAQ Section -->
+            <div class="w-full bg-[#f8f9fa] py-20">
                 <div class="layout-container flex w-full justify-center px-4 md:px-10">
-                    <div class="max-w-[800px] w-full flex flex-col items-center reveal">
-                        <div class="text-center mb-12">
-                            <h2 class="text-primary dark:text-white text-2xl md:text-3xl font-bold mb-4">Pertanyaan Umum
-                            </h2>
-                            <p class="text-gray-500 dark:text-gray-400 max-w-lg mx-auto">Informasi singkat mengenai
-                                layanan
+                    <div class="max-w-[800px] w-full flex flex-col items-center">
+                        <div class="text-center mb-12" data-aos="fade-up">
+                            <div
+                                class="inline-flex items-center gap-2 text-accent font-semibold uppercase tracking-[0.15em] text-xs mb-4">
+                                <span class="w-8 h-[2px] bg-accent"></span>
+                                FAQ
+                            </div>
+                            <h2 class="text-primary text-2xl md:text-4xl font-light mb-4">pertanyaan <span
+                                    class="font-bold">umum</span></h2>
+                            <p class="text-[#5e738d] max-w-lg mx-auto">Informasi singkat mengenai layanan
                                 dan operasional kami yang mungkin Anda perlukan.</p>
                         </div>
                         <div class="w-full flex flex-col gap-5">
                             <details
-                                class="group bg-white dark:bg-[#1a2634] rounded-xl shadow-soft hover:shadow-card transition-all duration-300 border border-transparent hover:border-gray-100 dark:hover:border-gray-700 overflow-hidden">
+                                class="group bg-white rounded-xl shadow-soft hover:shadow-card transition-all duration-300 border border-gray-100 overflow-hidden"
+                                data-aos="fade-up" data-aos-delay="100">
                                 <summary
-                                    class="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-primary dark:text-white select-none">
+                                    class="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-primary select-none">
                                     <span class="text-lg">Bagaimana cara mengajukan penawaran proyek?</span>
                                     <span
-                                        class="transition-transform duration-300 group-open:rotate-180 flex items-center justify-center w-8 h-8 rounded-full bg-gray-50 dark:bg-gray-800 text-gray-500">
+                                        class="transition-transform duration-300 group-open:rotate-180 flex items-center justify-center w-8 h-8 rounded-full bg-gray-50 text-gray-500">
                                         <span class="material-symbols-outlined">expand_more</span>
                                     </span>
                                 </summary>
                                 <div
-                                    class="text-gray-600 dark:text-gray-300 px-6 pb-6 pt-0 text-base leading-relaxed border-t border-dashed border-gray-100 dark:border-gray-700 mt-2">
+                                    class="text-[#5e738d] px-6 pb-6 pt-0 text-base leading-relaxed border-t border-dashed border-gray-100 mt-2">
                                     <div class="pt-4">
                                         Anda dapat mengisi formulir kontak di atas dengan memilih subjek "Pertanyaan
-                                        Proyek
-                                        Baru", atau mengirimkan email langsung ke <a
-                                            class="text-blue-600 font-semibold hover:underline"
+                                        Proyek Baru", atau mengirimkan email langsung ke <a
+                                            class="text-accent font-semibold hover:underline"
                                             href="mailto:marketing@reksakon.com">marketing@reksakon.com</a> dengan
                                         melampirkan detail kebutuhan proyek Anda (TOR/RFP).
                                     </div>
                                 </div>
                             </details>
                             <details
-                                class="group bg-white dark:bg-[#1a2634] rounded-xl shadow-soft hover:shadow-card transition-all duration-300 border border-transparent hover:border-gray-100 dark:hover:border-gray-700 overflow-hidden">
+                                class="group bg-white rounded-xl shadow-soft hover:shadow-card transition-all duration-300 border border-gray-100 overflow-hidden"
+                                data-aos="fade-up" data-aos-delay="200">
                                 <summary
-                                    class="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-primary dark:text-white select-none">
+                                    class="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-primary select-none">
                                     <span class="text-lg">Apakah melayani proyek di luar Pulau Jawa?</span>
                                     <span
-                                        class="transition-transform duration-300 group-open:rotate-180 flex items-center justify-center w-8 h-8 rounded-full bg-gray-50 dark:bg-gray-800 text-gray-500">
+                                        class="transition-transform duration-300 group-open:rotate-180 flex items-center justify-center w-8 h-8 rounded-full bg-gray-50 text-gray-500">
                                         <span class="material-symbols-outlined">expand_more</span>
                                     </span>
                                 </summary>
                                 <div
-                                    class="text-gray-600 dark:text-gray-300 px-6 pb-6 pt-0 text-base leading-relaxed border-t border-dashed border-gray-100 dark:border-gray-700 mt-2">
+                                    class="text-[#5e738d] px-6 pb-6 pt-0 text-base leading-relaxed border-t border-dashed border-gray-100 mt-2">
                                     <div class="pt-4">
                                         Ya, kami memiliki pengalaman dan kapabilitas untuk menangani proyek konstruksi
-                                        dan
-                                        supply di seluruh wilayah Indonesia, termasuk daerah terpencil. Tim logistik
-                                        kami
-                                        berpengalaman dalam mobilisasi ke area sulit.
+                                        dan supply di seluruh wilayah Indonesia, termasuk daerah terpencil. Tim
+                                        logistik kami berpengalaman dalam mobilisasi ke area sulit.
                                     </div>
                                 </div>
                             </details>
                             <details
-                                class="group bg-white dark:bg-[#1a2634] rounded-xl shadow-soft hover:shadow-card transition-all duration-300 border border-transparent hover:border-gray-100 dark:hover:border-gray-700 overflow-hidden">
+                                class="group bg-white rounded-xl shadow-soft hover:shadow-card transition-all duration-300 border border-gray-100 overflow-hidden"
+                                data-aos="fade-up" data-aos-delay="300">
                                 <summary
-                                    class="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-primary dark:text-white select-none">
+                                    class="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-primary select-none">
                                     <span class="text-lg">Berapa lama waktu respon untuk pertanyaan melalui
                                         email?</span>
                                     <span
-                                        class="transition-transform duration-300 group-open:rotate-180 flex items-center justify-center w-8 h-8 rounded-full bg-gray-50 dark:bg-gray-800 text-gray-500">
+                                        class="transition-transform duration-300 group-open:rotate-180 flex items-center justify-center w-8 h-8 rounded-full bg-gray-50 text-gray-500">
                                         <span class="material-symbols-outlined">expand_more</span>
                                     </span>
                                 </summary>
                                 <div
-                                    class="text-gray-600 dark:text-gray-300 px-6 pb-6 pt-0 text-base leading-relaxed border-t border-dashed border-gray-100 dark:border-gray-700 mt-2">
+                                    class="text-[#5e738d] px-6 pb-6 pt-0 text-base leading-relaxed border-t border-dashed border-gray-100 mt-2">
                                     <div class="pt-4">
                                         Tim kami berkomitmen untuk merespon setiap pertanyaan yang masuk dalam waktu
                                         maksimal 24 jam pada hari kerja (Senin - Jumat). Untuk keadaan darurat proyek,
@@ -385,86 +423,122 @@
                     </div>
                 </div>
             </div>
-            <footer class="w-full bg-[#0f1823] text-white pt-16 pb-8 border-t border-gray-800">
-                <div class="layout-container flex w-full justify-center px-4 md:px-10">
-                    <div class="max-w-[1280px] w-full flex flex-col gap-12">
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-                            <div class="flex flex-col gap-4">
-                                <div class="flex items-center gap-3">
-                                    <span class="material-symbols-outlined text-3xl text-white">engineering</span>
-                                    <span class="text-xl font-bold">Rekayasa Sarana Konstruksi</span>
-                                </div>
-                                <p class="text-gray-400 text-sm leading-relaxed">
-                                    Mitra berharga Anda yang tumbuh dengan pengetahuan luas dalam konstruksi dan
-                                    rekayasa.
-                                </p>
-                                <div class="flex gap-4 mt-2">
-                                    <a class="text-gray-400 hover:text-white transition-colors" href="#"><span
-                                            class="material-symbols-outlined">public</span></a>
-                                    <a class="text-gray-400 hover:text-white transition-colors" href="#"><span
-                                            class="material-symbols-outlined">mail</span></a>
-                                    <a class="text-gray-400 hover:text-white transition-colors" href="#"><span
-                                            class="material-symbols-outlined">call</span></a>
-                                </div>
-                            </div>
-                            <div class="flex flex-col gap-4">
-                                <h4 class="text-lg font-bold">Head Office</h4>
-                                <div class="flex flex-col gap-2 text-sm text-gray-400">
-                                    <p>Jalan Komplek Palem Lestari</p>
-                                    <p>Ruko Galaxy Cengkareng Barat</p>
-                                    <p>Cengkareng Kota Adm, Jakarta Barat</p>
-                                    <p>DKI Jakarta</p>
-                                    <p class="mt-2 text-white"><span
-                                            class="material-symbols-outlined text-sm align-middle mr-1">mail</span>
-                                        marketing@reksakon.com</p>
-                                </div>
-                            </div>
-                            <div class="flex flex-col gap-4">
-                                <h4 class="text-lg font-bold">Operational Office</h4>
-                                <div class="flex flex-col gap-2 text-sm text-gray-400">
-                                    <p>Jalan Kh Syafi'i IV/77 Dahanrejo</p>
-                                    <p>Rt 001 Rw 002 Kec. Kebomas</p>
-                                    <p>Kab. Gresik - Jawa Timur</p>
-                                </div>
-                            </div>
-                            <div class="flex flex-col gap-4">
-                                <h4 class="text-lg font-bold">Tautan Cepat</h4>
-                                <div class="flex flex-col gap-2 text-sm text-gray-400">
-                                    <a class="hover:text-white transition-colors" href="index.html">Beranda</a>
-                                    <a class="hover:text-white transition-colors" href="layanan.html">Layanan</a>
-                                    <a class="hover:text-white transition-colors" href="portofolio.html">Proyek</a>
-                                    <a class="hover:text-white transition-colors" href="klien.html">Klien</a>
-                                    <a class="hover:text-white transition-colors"
-                                        href="pengalaman-kerja.html">Pengalaman
-                                        Kerja</a>
-                                </div>
-                            </div>
+        </main>
+    </div>
+
+    <!-- Footer — Dark Slate Hatch Style -->
+    <footer class="w-full bg-[#263545] text-white pt-16 pb-8">
+        <div class="layout-container flex w-full justify-center px-4 md:px-10">
+            <div class="max-w-[1280px] w-full flex flex-col gap-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                    <div class="flex flex-col gap-4">
+                        <p class="text-xl md:text-2xl font-light leading-snug text-white/90">
+                            let's build positive change,<br>
+                            <span class="font-bold">together.</span>
+                        </p>
+                        <div class="flex items-center gap-2 mt-2">
+                            <span class="hatch-plus text-3xl font-light">+</span>
+                            <img src="logo.png" alt="Logo" class="h-8 w-auto brightness-0 invert opacity-70">
                         </div>
-                        <div
-                            class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
-                            <p>© 2024 PT Rekayasa Sarana Konstruksi. Hak Cipta Dilindungi.</p>
-                            <div class="flex gap-6">
-                                <a class="hover:text-gray-300" href="#">Kebijakan Privasi</a>
-                                <a class="hover:text-gray-300" href="#">Syarat &amp; Ketentuan</a>
-                            </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h4 class="text-base font-bold">Head Office</h4>
+                        <div class="flex flex-col gap-1.5 text-sm text-white/60">
+                            <p>Jalan Komplek Palem Lestari</p>
+                            <p>Ruko Galaxy Cengkareng Barat</p>
+                            <p>Cengkareng Kota Adm, Jakarta Barat</p>
+                            <p>DKI Jakarta</p>
+                            <p class="mt-2 text-white/80">
+                                <span class="material-symbols-outlined text-sm align-middle mr-1">mail</span>
+                                marketing@reksakon.com
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h4 class="text-base font-bold">have a question?</h4>
+                        <a href="kontak.html"
+                            class="inline-flex items-center justify-center w-fit px-5 py-2 border border-white/40 text-white/80 text-sm rounded hover:bg-white/10 transition-colors">
+                            Contact Us
+                        </a>
+                        <h4 class="text-base font-bold mt-4">office locations</h4>
+                        <div class="flex flex-col gap-1.5 text-sm text-white/60">
+                            <p>Jalan Kh Syafi'i IV/77 Dahanrejo</p>
+                            <p>Rt 001 Rw 002 Kec. Kebomas</p>
+                            <p>Kab. Gresik - Jawa Timur</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h4 class="text-base font-bold">follow us</h4>
+                        <div class="flex gap-3">
+                            <a class="w-10 h-10 border border-white/30 flex items-center justify-center text-white/70 hover:text-white hover:border-white transition-colors"
+                                href="#">
+                                <span class="material-symbols-outlined text-lg">public</span>
+                            </a>
+                            <a class="w-10 h-10 border border-white/30 flex items-center justify-center text-white/70 hover:text-white hover:border-white transition-colors"
+                                href="#">
+                                <span class="material-symbols-outlined text-lg">mail</span>
+                            </a>
+                            <a class="w-10 h-10 border border-white/30 flex items-center justify-center text-white/70 hover:text-white hover:border-white transition-colors"
+                                href="#">
+                                <span class="material-symbols-outlined text-lg">call</span>
+                            </a>
+                        </div>
+                        <h4 class="text-base font-bold mt-4">tautan cepat</h4>
+                        <div class="flex flex-col gap-1.5 text-sm text-white/60">
+                            <a class="hover:text-white transition-colors" href="index.html">beranda</a>
+                            <a class="hover:text-white transition-colors" href="layanan.html">layanan</a>
+                            <a class="hover:text-white transition-colors" href="portofolio.html">proyek</a>
+                            <a class="hover:text-white transition-colors" href="klien.html">klien</a>
+                            <a class="hover:text-white transition-colors" href="pengalaman-kerja.html">pengalaman
+                                kerja</a>
                         </div>
                     </div>
                 </div>
-            </footer>
+                <div
+                    class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40">
+                    <p>© 2024 PT Rekayasa Sarana Konstruksi. Hak Cipta Dilindungi.</p>
+                    <div class="flex gap-6">
+                        <a class="hover:text-white/70" href="#">Kebijakan Privasi</a>
+                        <a class="hover:text-white/70" href="#">Syarat &amp; Ketentuan</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init({
-                duration: 800,
-                once: true,
-                offset: 100,
-                easing: 'ease-out-cubic'
-            });
-        </script>
-        <script src="animations.js"></script>
-        <script src="mobile-menu.js"></script>
-        <script src="form-handler.js"></script>
-        <script src="dark-mode.js"></script>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+            easing: 'ease-out-cubic'
+        });
+    </script>
+    <script src="animations.js"></script>
+    <script src="mobile-menu.js"></script>
+    <script src="form-handler.js"></script>
+
+    <!-- Navbar scroll behavior -->
+    <script>
+        (function () {
+            const navbar = document.getElementById('main-navbar');
+            if (!navbar) return;
+
+            function updateNavbar() {
+                if (window.scrollY > 80) {
+                    navbar.classList.remove('navbar-transparent');
+                    navbar.classList.add('navbar-solid');
+                } else {
+                    navbar.classList.remove('navbar-solid');
+                    navbar.classList.add('navbar-transparent');
+                }
+            }
+
+            window.addEventListener('scroll', updateNavbar, { passive: true });
+            updateNavbar();
+        })();
+    </script>
 </body>
 
 </html>

@@ -12,7 +12,7 @@
     <meta property="og:description" content="Portofolio proyek konstruksi: sipil, energi, industri, minyak & gas.">
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;display=swap"
         rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
@@ -26,8 +26,10 @@
                 extend: {
                     colors: {
                         "primary": "#002047",
-                        "background-light": "#f5f7f8",
-                        "background-dark": "#0f1823",
+                        "accent": "#E34B31",
+                        "accent-dark": "#C83E28",
+                        "background-light": "#ffffff",
+                        "footer-dark": "#263545",
                     },
                     fontFamily: {
                         "display": ["Inter", "sans-serif"]
@@ -50,136 +52,163 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
+
+        header.navbar-transparent {
+            background: transparent !important;
+            border-bottom-color: transparent !important;
+        }
+
+        header.navbar-solid {
+            background: white !important;
+            border-bottom-color: #f0f2f5 !important;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        }
+
+        header.navbar-transparent .nav-link,
+        header.navbar-transparent .nav-brand {
+            color: white !important;
+        }
+
+        header.navbar-transparent .mobile-toggle {
+            color: white !important;
+        }
+
+        header.navbar-solid .nav-link {
+            color: #3a4a5c !important;
+        }
+
+        header.navbar-solid .nav-brand {
+            color: #002047 !important;
+        }
+
+        .hatch-plus {
+            color: #E34B31;
+            font-weight: 300;
+            margin-right: 0.35em;
+        }
     </style>
     <link rel="stylesheet" href="animations.css">
 </head>
 
-<body class="bg-white text-[#101418] dark:bg-background-dark dark:text-white font-display antialiased">
+<body class="bg-background-light text-[#101418] font-display antialiased">
     <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
-        <header
-            class="sticky top-0 z-50 bg-white dark:bg-background-dark border-b border-solid border-gray-100 dark:border-b-gray-800">
+
+        <!-- Navbar -->
+        <header id="main-navbar"
+            class="navbar-transparent fixed top-0 left-0 right-0 z-50 border-b border-solid border-b-transparent transition-all duration-300">
             <div class="layout-container flex w-full justify-center">
                 <div
-                    class="w-full max-w-[1280px] px-4 md:px-10 py-3 flex items-center justify-between whitespace-nowrap">
-                    <div class="flex items-center gap-4 text-primary dark:text-white">
-                        <img src="logo.png" alt="Rekayasa Sarana Konstruksi Logo" class="h-10 w-auto">
-                        <h2 class="text-primary dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">
+                    class="w-full max-w-[1280px] px-4 md:px-10 py-4 flex items-center justify-between whitespace-nowrap">
+                    <div class="flex items-center gap-3">
+                        <img src="logo.png" alt="Rekayasa Sarana Konstruksi Logo" class="h-9 w-auto">
+                        <h2 class="nav-brand text-white text-lg font-bold leading-tight tracking-[-0.015em]">
                             Rekayasa Sarana Konstruksi</h2>
                     </div>
                     <div class="hidden lg:flex items-center gap-8">
-                        <nav class="flex items-center gap-6">
-                            <a class="text-[#101418] dark:text-gray-200 text-sm font-medium hover:text-primary dark:hover:text-blue-400 transition-colors"
-                                href="index.html">Beranda</a>
-                            <a class="text-[#101418] dark:text-gray-200 text-sm font-medium hover:text-primary dark:hover:text-blue-400 transition-colors"
-                                href="layanan.html">Layanan</a>
-                            <a class="text-primary dark:text-blue-400 text-sm font-bold transition-colors"
-                                href="portofolio.html">Proyek</a>
-                            <a class="text-[#101418] dark:text-gray-200 text-sm font-medium hover:text-primary dark:hover:text-blue-400 transition-colors"
-                                href="klien.html">Klien</a>
-                            <a class="text-[#101418] dark:text-gray-200 text-sm font-medium hover:text-primary dark:hover:text-blue-400 transition-colors"
-                                href="pengalaman-kerja.html">Pengalaman Kerja</a>
+                        <nav class="flex items-center gap-7">
+                            <a class="nav-link text-white/90 text-sm font-medium hover:text-white transition-colors"
+                                href="index.html">beranda</a>
+                            <a class="nav-link text-white/90 text-sm font-medium hover:text-white transition-colors"
+                                href="layanan.html">layanan</a>
+                            <a class="nav-link text-white text-sm font-bold transition-colors"
+                                href="portofolio.html">proyek</a>
+                            <a class="nav-link text-white/90 text-sm font-medium hover:text-white transition-colors"
+                                href="klien.html">klien</a>
+                            <a class="nav-link text-white/90 text-sm font-medium hover:text-white transition-colors"
+                                href="pengalaman-kerja.html">pengalaman kerja</a>
                         </nav>
                         <a href="kontak.html"
-                            class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary hover:bg-[#001835] transition-colors text-white text-sm font-bold leading-normal tracking-[0.015em] shadow-md hover:shadow-lg">
-                            <span class="truncate">Hubungi Kami</span>
+                            class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-accent hover:bg-accent-dark transition-colors text-white text-sm font-semibold leading-normal tracking-wide">
+                            <span class="truncate">hubungi kami</span>
                         </a>
-                        <button id="dark-mode-toggle"
-                            class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
-                            title="Toggle Dark Mode">
-                            <span id="dark-mode-icon"
-                                class="material-symbols-outlined text-[#101418] dark:text-white">dark_mode</span>
-                        </button>
                     </div>
-                    <button id="mobile-menu-toggle" class="lg:hidden text-[#101418] dark:text-white cursor-pointer">
+                    <button id="mobile-menu-toggle" class="mobile-toggle lg:hidden text-white cursor-pointer">
                         <span class="material-symbols-outlined">menu</span>
                     </button>
                 </div>
             </div>
         </header>
+
         <!-- Mobile Menu Overlay -->
         <div id="mobile-menu-overlay"
             class="fixed inset-0 bg-black/50 z-[60] opacity-0 pointer-events-none transition-opacity duration-300">
         </div>
         <!-- Mobile Menu Panel -->
         <div id="mobile-menu"
-            class="fixed top-0 right-0 h-full w-72 bg-white dark:bg-background-dark z-[70] shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
-            <div class="flex items-center justify-between p-4 border-b border-gray-100 dark:border-gray-800">
-                <span class="text-primary dark:text-white font-bold text-lg">Menu</span>
-                <button id="mobile-menu-close"
-                    class="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-white cursor-pointer">
+            class="fixed top-0 right-0 h-full w-72 bg-white z-[70] shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+            <div class="flex items-center justify-between p-4 border-b border-gray-100">
+                <span class="text-primary font-bold text-lg">Menu</span>
+                <button id="mobile-menu-close" class="text-gray-500 hover:text-primary cursor-pointer">
                     <span class="material-symbols-outlined">close</span>
                 </button>
             </div>
             <nav class="flex flex-col p-4 gap-1">
-                <a class="px-4 py-3 rounded-lg text-sm font-medium text-[#101418] dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
-                    href="index.html">Beranda</a>
-                <a class="px-4 py-3 rounded-lg text-sm font-medium text-[#101418] dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
-                    href="layanan.html">Layanan</a>
-                <a class="px-4 py-3 rounded-lg text-sm font-medium text-[#101418] dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
-                    href="portofolio.html">Proyek</a>
-                <a class="px-4 py-3 rounded-lg text-sm font-medium text-[#101418] dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
-                    href="klien.html">Klien</a>
-                <a class="px-4 py-3 rounded-lg text-sm font-medium text-[#101418] dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
-                    href="pengalaman-kerja.html">Pengalaman Kerja</a>
+                <a class="px-4 py-3 rounded-lg text-sm font-medium text-[#3a4a5c] hover:bg-gray-50 transition-colors"
+                    href="index.html">beranda</a>
+                <a class="px-4 py-3 rounded-lg text-sm font-medium text-[#3a4a5c] hover:bg-gray-50 transition-colors"
+                    href="layanan.html">layanan</a>
+                <a class="px-4 py-3 rounded-lg text-sm font-medium text-[#3a4a5c] hover:bg-gray-50 transition-colors"
+                    href="portofolio.html">proyek</a>
+                <a class="px-4 py-3 rounded-lg text-sm font-medium text-[#3a4a5c] hover:bg-gray-50 transition-colors"
+                    href="klien.html">klien</a>
+                <a class="px-4 py-3 rounded-lg text-sm font-medium text-[#3a4a5c] hover:bg-gray-50 transition-colors"
+                    href="pengalaman-kerja.html">pengalaman kerja</a>
             </nav>
-            <div class="mt-auto p-4 border-t border-gray-100 dark:border-gray-800">
+            <div class="mt-auto p-4 border-t border-gray-100">
                 <a href="kontak.html"
-                    class="flex w-full items-center justify-center rounded-lg h-10 px-5 bg-primary hover:bg-[#001835] transition-colors text-white text-sm font-bold shadow-md">
-                    Hubungi Kami
+                    class="flex w-full items-center justify-center rounded-full h-10 px-5 bg-accent hover:bg-accent-dark transition-colors text-white text-sm font-semibold shadow-md">
+                    hubungi kami
                 </a>
             </div>
         </div>
-        <div class="w-full">
-            <div class="relative flex min-h-[500px] md:min-h-[600px] flex-col justify-center bg-cover bg-center bg-no-repeat overflow-hidden"
-                style="background-image: linear-gradient(rgba(0, 15, 40, 0.75), rgba(0, 15, 40, 0.9)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5');">
 
-                <!-- Animated Background Elements -->
-                <div
-                    class="absolute top-0 right-0 w-1/3 h-full bg-blue-500/10 -skew-x-12 transform translate-x-1/2 hidden lg:block">
-                </div>
+        <!-- Hero Section -->
+        <div class="relative min-h-[500px] md:min-h-[600px] flex flex-col justify-center overflow-hidden"
+            style="background-image: linear-gradient(rgba(0, 15, 40, 0.55), rgba(0, 15, 40, 0.7)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2940&auto=format&fit=crop'); background-size: cover; background-position: center;">
 
-                <div class="layout-container relative z-10 flex w-full justify-center px-4 md:px-10 py-16 md:py-24">
-                    <div class="max-w-[1280px] w-full flex flex-col gap-6" data-aos="fade-up" data-aos-duration="1000">
-                        <div
-                            class="flex items-center gap-2 text-blue-300 text-sm font-bold uppercase tracking-widest mb-2">
-                            <a class="hover:text-white transition-colors" href="index.html">Beranda</a>
-                            <span class="material-symbols-outlined text-xs">chevron_right</span>
-                            <span class="text-white">Portofolio Proyek</span>
-                        </div>
-                        <h1 class="text-white text-5xl md:text-7xl font-black leading-[1.1] tracking-tight">
-                            Mahakarya <br class="hidden md:block">
-                            <span
-                                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200">Rekayasa
-                                Kami</span>
-                        </h1>
-                        <p class="text-gray-300 text-lg md:text-xl font-normal leading-relaxed max-w-[700px]">
-                            Jelajahi berbagai proyek strategis yang telah kami selesaikan dengan integrasi keahlian
-                            teknis dan standar kualitas tinggi.
-                        </p>
+            <div class="relative z-10 flex w-full justify-center px-4 md:px-10 py-32 md:py-40">
+                <div class="max-w-[1280px] w-full flex flex-col gap-6" data-aos="fade-up" data-aos-duration="1000">
+                    <div
+                        class="inline-flex items-center gap-2 text-white/60 font-semibold uppercase tracking-[0.15em] text-xs">
+                        <span class="w-8 h-[2px] bg-accent"></span>
+                        portofolio proyek
                     </div>
+                    <h1 class="text-white text-4xl md:text-6xl lg:text-7xl font-light leading-[1.1] tracking-tight">
+                        mahakarya<br class="hidden md:block">
+                        <span class="font-bold">rekayasa kami</span>
+                    </h1>
+                    <p class="text-white/70 text-base md:text-lg font-normal leading-relaxed max-w-[650px]">
+                        <span class="hatch-plus text-xl">+</span>jelajahi berbagai proyek strategis yang telah kami
+                        selesaikan dengan integrasi keahlian teknis dan standar kualitas tinggi.
+                    </p>
                 </div>
             </div>
         </div>
-        <div class="w-full bg-white dark:bg-background-dark py-12 md:py-20">
+
+        <!-- Portfolio Content -->
+        <div class="w-full bg-white py-12 md:py-20">
             <div class="layout-container flex w-full justify-center px-4 md:px-10">
                 <div class="max-w-[1280px] w-full flex flex-col gap-10">
+
+                    <!-- Filter Buttons -->
                     <div class="flex flex-wrap justify-center gap-3 md:gap-4 filter-container" data-aos="fade-up">
                         <button data-filter="all"
-                            class="filter-btn active px-6 py-2.5 rounded-full bg-primary text-white font-bold text-sm shadow-lg ring-1 ring-primary transition-all hover:bg-[#003066]">Semua</button>
+                            class="filter-btn active px-6 py-2.5 rounded-full bg-primary text-white font-bold text-sm shadow-lg ring-1 ring-primary transition-all hover:bg-[#003066]">semua</button>
                         <button data-filter="sipil"
-                            class="filter-btn px-6 py-2.5 rounded-full bg-white dark:bg-[#1a2634] text-gray-600 dark:text-gray-300 font-medium text-sm hover:text-primary hover:border-primary border border-gray-100 dark:border-gray-700 transition-all shadow-sm">Sipil</button>
+                            class="filter-btn px-6 py-2.5 rounded-full bg-white text-gray-600 font-medium text-sm hover:text-primary hover:border-primary border border-gray-100 transition-all shadow-sm">sipil</button>
                         <button data-filter="energi"
-                            class="filter-btn px-6 py-2.5 rounded-full bg-white dark:bg-[#1a2634] text-gray-600 dark:text-gray-300 font-medium text-sm hover:text-primary hover:border-primary border border-gray-100 dark:border-gray-700 transition-all shadow-sm">Energi</button>
+                            class="filter-btn px-6 py-2.5 rounded-full bg-white text-gray-600 font-medium text-sm hover:text-primary hover:border-primary border border-gray-100 transition-all shadow-sm">energi</button>
                         <button data-filter="industri"
-                            class="filter-btn px-6 py-2.5 rounded-full bg-white dark:bg-[#1a2634] text-gray-600 dark:text-gray-300 font-medium text-sm hover:text-primary hover:border-primary border border-gray-100 dark:border-gray-700 transition-all shadow-sm">Industri</button>
+                            class="filter-btn px-6 py-2.5 rounded-full bg-white text-gray-600 font-medium text-sm hover:text-primary hover:border-primary border border-gray-100 transition-all shadow-sm">industri</button>
                         <button data-filter="migas"
-                            class="filter-btn px-6 py-2.5 rounded-full bg-white dark:bg-[#1a2634] text-gray-600 dark:text-gray-300 font-medium text-sm hover:text-primary hover:border-primary border border-gray-100 dark:border-gray-700 transition-all shadow-sm">Minyak
-                            &amp; Gas</button>
+                            class="filter-btn px-6 py-2.5 rounded-full bg-white text-gray-600 font-medium text-sm hover:text-primary hover:border-primary border border-gray-100 transition-all shadow-sm">minyak
+                            &amp; gas</button>
                     </div>
+
                     <!-- Project Grid -->
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <!-- Project 1 -->
-                        <div class="project-card group bg-white dark:bg-[#1a2634] rounded-2xl overflow-hidden shadow-soft border border-gray-100 dark:border-gray-800 hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col h-full"
+                        <div class="project-card group bg-white rounded-2xl overflow-hidden shadow-soft border border-gray-100 hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col h-full"
                             data-aos="fade-up" data-aos-delay="100" data-category="migas industri">
                             <div class="relative overflow-hidden h-64">
                                 <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2940&auto=format&fit=crop"
@@ -192,27 +221,27 @@
                             <div class="p-6 flex flex-col flex-grow">
                                 <div class="flex flex-wrap gap-2 mb-3">
                                     <span
-                                        class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full dark:bg-blue-900 dark:text-blue-300">Minyak
-                                        &amp; Gas</span>
+                                        class="bg-blue-50 text-blue-700 text-xs font-semibold px-2.5 py-0.5 rounded-full">minyak
+                                        &amp; gas</span>
                                     <span
-                                        class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">Painting</span>
+                                        class="bg-green-50 text-green-700 text-xs font-semibold px-2.5 py-0.5 rounded-full">painting</span>
                                 </div>
-                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 leading-tight">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2 leading-tight">
                                     RDMP Balikpapan</h3>
-                                <p
-                                    class="text-gray-600 dark:text-gray-400 text-sm font-light leading-relaxed flex-grow">
+                                <p class="text-[#5e738d] text-sm font-light leading-relaxed flex-grow">
                                     Pekerjaan Painting &amp; Coating skala besar untuk perluasan kilang minyak
                                     Pertamina.
                                 </p>
                                 <a href="#"
-                                    class="mt-4 inline-flex items-center text-primary dark:text-blue-400 text-sm font-semibold hover:underline">
-                                    Lihat Detail
+                                    class="mt-4 inline-flex items-center text-accent text-sm font-semibold hover:underline">
+                                    lihat detail
                                     <span class="material-symbols-outlined text-base ml-1">arrow_right_alt</span>
                                 </a>
                             </div>
                         </div>
+
                         <!-- Project 2 -->
-                        <div class="project-card group bg-white dark:bg-[#1a2634] rounded-2xl overflow-hidden shadow-soft border border-gray-100 dark:border-gray-800 hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col h-full"
+                        <div class="project-card group bg-white rounded-2xl overflow-hidden shadow-soft border border-gray-100 hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col h-full"
                             data-aos="fade-up" data-aos-delay="200" data-category="industri sipil">
                             <div class="relative overflow-hidden h-64">
                                 <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2940&auto=format&fit=crop"
@@ -225,26 +254,26 @@
                             <div class="p-6 flex flex-col flex-grow">
                                 <div class="flex flex-wrap gap-2 mb-3">
                                     <span
-                                        class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full dark:bg-yellow-900 text-white">Industri</span>
+                                        class="bg-yellow-50 text-yellow-700 text-xs font-semibold px-2.5 py-0.5 rounded-full">industri</span>
                                     <span
-                                        class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded-full dark:bg-purple-900 text-white">Civil</span>
+                                        class="bg-purple-50 text-purple-700 text-xs font-semibold px-2.5 py-0.5 rounded-full">civil</span>
                                 </div>
-                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 leading-tight">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2 leading-tight">
                                     Proyek Smelter Manyar</h3>
-                                <p
-                                    class="text-gray-600 dark:text-gray-400 text-sm font-light leading-relaxed flex-grow">
+                                <p class="text-[#5e738d] text-sm font-light leading-relaxed flex-grow">
                                     Konstruksi fasilitas pengolahan tembaga modern dengan standar keselamatan
                                     internasional.
                                 </p>
                                 <a href="#"
-                                    class="mt-4 inline-flex items-center text-primary dark:text-blue-400 text-sm font-semibold hover:underline">
-                                    Lihat Detail
+                                    class="mt-4 inline-flex items-center text-accent text-sm font-semibold hover:underline">
+                                    lihat detail
                                     <span class="material-symbols-outlined text-base ml-1">arrow_right_alt</span>
                                 </a>
                             </div>
                         </div>
+
                         <!-- Project 3 -->
-                        <div class="project-card group bg-white dark:bg-[#1a2634] rounded-2xl overflow-hidden shadow-soft border border-gray-100 dark:border-gray-800 hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col h-full"
+                        <div class="project-card group bg-white rounded-2xl overflow-hidden shadow-soft border border-gray-100 hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col h-full"
                             data-aos="fade-up" data-aos-delay="300" data-category="energi industri">
                             <div class="relative overflow-hidden h-64">
                                 <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2940&auto=format&fit=crop"
@@ -257,26 +286,26 @@
                             <div class="p-6 flex flex-col flex-grow">
                                 <div class="flex flex-wrap gap-2 mb-3">
                                     <span
-                                        class="bg-red-100 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded-full dark:bg-red-900 text-white">Energi</span>
+                                        class="bg-red-50 text-red-700 text-xs font-semibold px-2.5 py-0.5 rounded-full">energi</span>
                                     <span
-                                        class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-full dark:bg-indigo-900 text-white">MEP</span>
+                                        class="bg-indigo-50 text-indigo-700 text-xs font-semibold px-2.5 py-0.5 rounded-full">MEP</span>
                                 </div>
-                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 leading-tight">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2 leading-tight">
                                     PLTU Jawa 9 &amp; 10</h3>
-                                <p
-                                    class="text-gray-600 dark:text-gray-400 text-sm font-light leading-relaxed flex-grow">
+                                <p class="text-[#5e738d] text-sm font-light leading-relaxed flex-grow">
                                     Instalasi sistem kelistrikan tegangan tinggi untuk pembangkit listrik
                                     ultra-supercritical.
                                 </p>
                                 <a href="#"
-                                    class="mt-4 inline-flex items-center text-primary dark:text-blue-400 text-sm font-semibold hover:underline">
-                                    Lihat Detail
+                                    class="mt-4 inline-flex items-center text-accent text-sm font-semibold hover:underline">
+                                    lihat detail
                                     <span class="material-symbols-outlined text-base ml-1">arrow_right_alt</span>
                                 </a>
                             </div>
                         </div>
+
                         <!-- Project 4 -->
-                        <div class="project-card group bg-white dark:bg-[#1a2634] rounded-2xl overflow-hidden shadow-soft border border-gray-100 dark:border-gray-800 hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col h-full"
+                        <div class="project-card group bg-white rounded-2xl overflow-hidden shadow-soft border border-gray-100 hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col h-full"
                             data-aos="fade-up" data-aos-delay="100" data-category="sipil">
                             <div class="relative overflow-hidden h-64">
                                 <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2940&auto=format&fit=crop"
@@ -289,25 +318,25 @@
                             <div class="p-6 flex flex-col flex-grow">
                                 <div class="flex flex-wrap gap-2 mb-3">
                                     <span
-                                        class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full dark:bg-blue-900 text-white">Sipil</span>
+                                        class="bg-blue-50 text-blue-700 text-xs font-semibold px-2.5 py-0.5 rounded-full">sipil</span>
                                     <span
-                                        class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full dark:bg-green-900 text-white">Structure</span>
+                                        class="bg-green-50 text-green-700 text-xs font-semibold px-2.5 py-0.5 rounded-full">structure</span>
                                 </div>
-                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 leading-tight">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2 leading-tight">
                                     Jembatan Holtekamp</h3>
-                                <p
-                                    class="text-gray-600 dark:text-gray-400 text-sm font-light leading-relaxed flex-grow">
+                                <p class="text-[#5e738d] text-sm font-light leading-relaxed flex-grow">
                                     Pembangunan struktur baja bentang panjang yang menjadi ikon infrastruktur Papua.
                                 </p>
                                 <a href="#"
-                                    class="mt-4 inline-flex items-center text-primary dark:text-blue-400 text-sm font-semibold hover:underline">
-                                    Lihat Detail
+                                    class="mt-4 inline-flex items-center text-accent text-sm font-semibold hover:underline">
+                                    lihat detail
                                     <span class="material-symbols-outlined text-base ml-1">arrow_right_alt</span>
                                 </a>
                             </div>
                         </div>
+
                         <!-- Project 5 -->
-                        <div class="project-card group bg-white dark:bg-[#1a2634] rounded-2xl overflow-hidden shadow-soft border border-gray-100 dark:border-gray-800 hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col h-full"
+                        <div class="project-card group bg-white rounded-2xl overflow-hidden shadow-soft border border-gray-100 hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col h-full"
                             data-aos="fade-up" data-aos-delay="200" data-category="industri">
                             <div class="relative overflow-hidden h-64">
                                 <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2940&auto=format&fit=crop"
@@ -320,26 +349,26 @@
                             <div class="p-6 flex flex-col flex-grow">
                                 <div class="flex flex-wrap gap-2 mb-3">
                                     <span
-                                        class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full dark:bg-yellow-900 text-white">Industri</span>
+                                        class="bg-yellow-50 text-yellow-700 text-xs font-semibold px-2.5 py-0.5 rounded-full">industri</span>
                                     <span
-                                        class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded-full dark:bg-purple-900 text-white">Scaffolding</span>
+                                        class="bg-purple-50 text-purple-700 text-xs font-semibold px-2.5 py-0.5 rounded-full">scaffolding</span>
                                 </div>
-                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 leading-tight">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2 leading-tight">
                                     Petrochemical Plant Cilegon</h3>
-                                <p
-                                    class="text-gray-600 dark:text-gray-400 text-sm font-light leading-relaxed flex-grow">
+                                <p class="text-[#5e738d] text-sm font-light leading-relaxed flex-grow">
                                     Penyediaan scaffolding system terintegrasi untuk maintenance rutin pabrik
                                     petrokimia.
                                 </p>
                                 <a href="#"
-                                    class="mt-4 inline-flex items-center text-primary dark:text-blue-400 text-sm font-semibold hover:underline">
-                                    Lihat Detail
+                                    class="mt-4 inline-flex items-center text-accent text-sm font-semibold hover:underline">
+                                    lihat detail
                                     <span class="material-symbols-outlined text-base ml-1">arrow_right_alt</span>
                                 </a>
                             </div>
                         </div>
+
                         <!-- Project 6 -->
-                        <div class="project-card group bg-white dark:bg-[#1a2634] rounded-2xl overflow-hidden shadow-soft border border-gray-100 dark:border-gray-800 hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col h-full"
+                        <div class="project-card group bg-white rounded-2xl overflow-hidden shadow-soft border border-gray-100 hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col h-full"
                             data-aos="fade-up" data-aos-delay="300" data-category="migas">
                             <div class="relative overflow-hidden h-64">
                                 <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2940&auto=format&fit=crop"
@@ -352,121 +381,143 @@
                             <div class="p-6 flex flex-col flex-grow">
                                 <div class="flex flex-wrap gap-2 mb-3">
                                     <span
-                                        class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full dark:bg-blue-900 text-white">Minyak
-                                        &amp; Gas</span>
+                                        class="bg-blue-50 text-blue-700 text-xs font-semibold px-2.5 py-0.5 rounded-full">minyak
+                                        &amp; gas</span>
                                     <span
-                                        class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full dark:bg-green-900 text-white">Coating</span>
+                                        class="bg-green-50 text-green-700 text-xs font-semibold px-2.5 py-0.5 rounded-full">coating</span>
                                 </div>
-                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 leading-tight">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2 leading-tight">
                                     Terminal LNG Tangguh</h3>
-                                <p
-                                    class="text-gray-600 dark:text-gray-400 text-sm font-light leading-relaxed flex-grow">
+                                <p class="text-[#5e738d] text-sm font-light leading-relaxed flex-grow">
                                     Perlindungan anti-korosi (Blasting &amp; Painting) pada tangki penyimpanan gas
                                     alam cair.
                                 </p>
                                 <a href="#"
-                                    class="mt-4 inline-flex items-center text-primary dark:text-blue-400 text-sm font-semibold hover:underline">
-                                    Lihat Detail
+                                    class="mt-4 inline-flex items-center text-accent text-sm font-semibold hover:underline">
+                                    lihat detail
                                     <span class="material-symbols-outlined text-base ml-1">arrow_right_alt</span>
                                 </a>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Load More -->
                     <div class="flex justify-center mt-8">
                         <button
-                            class="flex items-center gap-2 px-8 py-3 rounded-lg border border-primary dark:border-blue-400 text-primary dark:text-blue-400 font-bold hover:bg-primary hover:text-white dark:hover:bg-blue-400 dark:hover:text-background-dark transition-all duration-300 shadow-sm hover:shadow-md">
+                            class="flex items-center gap-2 px-8 py-3 rounded-full border border-primary text-primary font-bold text-sm hover:bg-primary hover:text-white transition-all duration-300 shadow-sm hover:shadow-md">
                             <span class="material-symbols-outlined">refresh</span>
-                            Muat Lebih Banyak
+                            muat lebih banyak
                         </button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="w-full bg-gray-50 dark:bg-background-dark py-20 border-t border-gray-100 dark:border-gray-800">
-            <div class="layout-container flex w-full justify-center px-4 md:px-10">
-                <div class="max-w-[800px] w-full text-center flex flex-col gap-6 items-center">
-                    <div data-aos="zoom-in">
-                        <h2 class="text-3xl md:text-5xl font-black text-[#101418] dark:text-white mb-4">Siap Memulai
-                            Proyek Anda?</h2>
-                        <p class="text-gray-600 dark:text-gray-400 text-lg mb-8 max-w-2xl mx-auto">
-                            Diskusikan kebutuhan spesifik proyek Anda dengan tim engineering kami untuk mendapatkan
-                            solusi yang efektif dan efisien.
+
+        <!-- CTA Banner — Hatch Style -->
+        <div class="w-full bg-accent py-20 md:py-28 relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-accent via-[#d4442e] to-accent-dark opacity-90"></div>
+            <div class="absolute top-0 right-0 w-[400px] h-[400px] bg-white/5 rounded-full blur-3xl -mr-48 -mt-48">
+            </div>
+            <div class="absolute bottom-0 left-0 w-[300px] h-[300px] bg-white/5 rounded-full blur-3xl -ml-32 -mb-32">
+            </div>
+
+            <div class="relative z-10 flex w-full justify-center px-4 md:px-10">
+                <div class="max-w-[800px] w-full text-center flex flex-col items-center gap-6" data-aos="zoom-in">
+                    <h2 class="text-white text-4xl md:text-5xl lg:text-6xl font-light leading-tight">
+                        siap memulai proyek anda?
+                    </h2>
+                    <p class="text-white/80 text-lg md:text-xl font-light">
+                        mari terhubung.
+                    </p>
+                    <a href="kontak.html"
+                        class="mt-4 inline-flex items-center justify-center rounded-full h-12 px-10 border-2 border-white text-white hover:bg-white hover:text-accent transition-all text-sm font-semibold tracking-wide">
+                        mulai konsultasi
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer — Dark Slate Hatch Style -->
+    <footer class="w-full bg-[#263545] text-white pt-16 pb-8">
+        <div class="layout-container flex w-full justify-center px-4 md:px-10">
+            <div class="max-w-[1280px] w-full flex flex-col gap-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                    <div class="flex flex-col gap-4">
+                        <p class="text-xl md:text-2xl font-light leading-snug text-white/90">
+                            let's build positive change,<br>
+                            <span class="font-bold">together.</span>
                         </p>
+                        <div class="flex items-center gap-2 mt-2">
+                            <span class="hatch-plus text-3xl font-light">+</span>
+                            <img src="logo.png" alt="Logo" class="h-8 w-auto brightness-0 invert opacity-70">
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h4 class="text-base font-bold">Head Office</h4>
+                        <div class="flex flex-col gap-1.5 text-sm text-white/60">
+                            <p>Jalan Komplek Palem Lestari</p>
+                            <p>Ruko Galaxy Cengkareng Barat</p>
+                            <p>Cengkareng Kota Adm, Jakarta Barat</p>
+                            <p>DKI Jakarta</p>
+                            <p class="mt-2 text-white/80">
+                                <span class="material-symbols-outlined text-sm align-middle mr-1">mail</span>
+                                marketing@reksakon.com
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h4 class="text-base font-bold">have a question?</h4>
                         <a href="kontak.html"
-                            class="px-8 py-4 bg-primary hover:bg-[#003066] text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-blue-900/20 transform hover:-translate-y-1 inline-block">
-                            Mulai Konsultasi
+                            class="inline-flex items-center justify-center w-fit px-5 py-2 border border-white/40 text-white/80 text-sm rounded hover:bg-white/10 transition-colors">
+                            Contact Us
                         </a>
+                        <h4 class="text-base font-bold mt-4">office locations</h4>
+                        <div class="flex flex-col gap-1.5 text-sm text-white/60">
+                            <p>Jalan Kh Syafi'i IV/77 Dahanrejo</p>
+                            <p>Rt 001 Rw 002 Kec. Kebomas</p>
+                            <p>Kab. Gresik - Jawa Timur</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h4 class="text-base font-bold">follow us</h4>
+                        <div class="flex gap-3">
+                            <a class="w-10 h-10 border border-white/30 flex items-center justify-center text-white/70 hover:text-white hover:border-white transition-colors"
+                                href="#">
+                                <span class="material-symbols-outlined text-lg">public</span>
+                            </a>
+                            <a class="w-10 h-10 border border-white/30 flex items-center justify-center text-white/70 hover:text-white hover:border-white transition-colors"
+                                href="#">
+                                <span class="material-symbols-outlined text-lg">mail</span>
+                            </a>
+                            <a class="w-10 h-10 border border-white/30 flex items-center justify-center text-white/70 hover:text-white hover:border-white transition-colors"
+                                href="#">
+                                <span class="material-symbols-outlined text-lg">call</span>
+                            </a>
+                        </div>
+                        <h4 class="text-base font-bold mt-4">tautan cepat</h4>
+                        <div class="flex flex-col gap-1.5 text-sm text-white/60">
+                            <a class="hover:text-white transition-colors" href="index.html">beranda</a>
+                            <a class="hover:text-white transition-colors" href="layanan.html">layanan</a>
+                            <a class="hover:text-white transition-colors" href="portofolio.html">proyek</a>
+                            <a class="hover:text-white transition-colors" href="klien.html">klien</a>
+                            <a class="hover:text-white transition-colors" href="pengalaman-kerja.html">pengalaman
+                                kerja</a>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40">
+                    <p>© 2024 PT Rekayasa Sarana Konstruksi. Hak Cipta Dilindungi.</p>
+                    <div class="flex gap-6">
+                        <a class="hover:text-white/70" href="#">Kebijakan Privasi</a>
+                        <a class="hover:text-white/70" href="#">Syarat &amp; Ketentuan</a>
                     </div>
                 </div>
             </div>
         </div>
-        <footer class="w-full bg-[#0f1823] text-white pt-16 pb-8 border-t border-gray-800">
-            <div class="layout-container flex w-full justify-center px-4 md:px-10">
-                <div class="max-w-[1280px] w-full flex flex-col gap-12">
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-                        <div class="flex flex-col gap-4">
-                            <div class="flex items-center gap-3">
-                                <span class="material-symbols-outlined text-3xl text-white">engineering</span>
-                                <span class="text-xl font-bold">Rekayasa Sarana Konstruksi</span>
-                            </div>
-                            <p class="text-gray-400 text-sm leading-relaxed">
-                                Mitra berharga Anda yang tumbuh dengan pengetahuan luas dalam konstruksi dan
-                                rekayasa.
-                            </p>
-                            <div class="flex gap-4 mt-2">
-                                <a class="text-gray-400 hover:text-white transition-colors" href="#"><span
-                                        class="material-symbols-outlined">public</span></a>
-                                <a class="text-gray-400 hover:text-white transition-colors" href="#"><span
-                                        class="material-symbols-outlined">mail</span></a>
-                                <a class="text-gray-400 hover:text-white transition-colors" href="#"><span
-                                        class="material-symbols-outlined">call</span></a>
-                            </div>
-                        </div>
-                        <div class="flex flex-col gap-4">
-                            <h4 class="text-lg font-bold">Head Office</h4>
-                            <div class="flex flex-col gap-2 text-sm text-gray-400">
-                                <p>Jalan Komplek Palem Lestari</p>
-                                <p>Ruko Galaxy Cengkareng Barat</p>
-                                <p>Cengkareng Kota Adm, Jakarta Barat</p>
-                                <p>DKI Jakarta</p>
-                                <p class="mt-2 text-white"><span
-                                        class="material-symbols-outlined text-sm align-middle mr-1">mail</span>
-                                    marketing@reksakon.com</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-col gap-4">
-                            <h4 class="text-lg font-bold">Operational Office</h4>
-                            <div class="flex flex-col gap-2 text-sm text-gray-400">
-                                <p>Jalan Kh Syafi'i IV/77 Dahanrejo</p>
-                                <p>Rt 001 Rw 002 Kec. Kebomas</p>
-                                <p>Kab. Gresik - Jawa Timur</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-col gap-4">
-                            <h4 class="text-lg font-bold">Tautan Cepat</h4>
-                            <div class="flex flex-col gap-2 text-sm text-gray-400">
-                                <a class="hover:text-white transition-colors" href="index.html">Beranda</a>
-                                <a class="hover:text-white transition-colors" href="layanan.html">Layanan</a>
-                                <a class="hover:text-white transition-colors" href="portofolio.html">Proyek</a>
-                                <a class="hover:text-white transition-colors" href="klien.html">Klien</a>
-                                <a class="hover:text-white transition-colors" href="pengalaman-kerja.html">Pengalaman
-                                    Kerja</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
-                        <p>© 2024 PT Rekayasa Sarana Konstruksi. Hak Cipta Dilindungi.</p>
-                        <div class="flex gap-6">
-                            <a class="hover:text-gray-300" href="#">Kebijakan Privasi</a>
-                            <a class="hover:text-gray-300" href="#">Syarat &amp; Ketentuan</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
-    </div>
+    </footer>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
@@ -485,14 +536,13 @@
                 button.addEventListener('click', () => {
                     const filter = button.getAttribute('data-filter');
 
-                    // Update active button styling
                     filterButtons.forEach(btn => {
                         btn.classList.remove('active', 'bg-primary', 'text-white', 'shadow-lg', 'ring-1', 'ring-primary');
-                        btn.classList.add('bg-white', 'dark:bg-[#1a2634]', 'text-gray-600', 'dark:text-gray-300', 'font-medium', 'border', 'border-gray-100', 'dark:border-gray-700', 'shadow-sm');
+                        btn.classList.add('bg-white', 'text-gray-600', 'font-medium', 'border', 'border-gray-100', 'shadow-sm');
                     });
 
                     button.classList.add('active', 'bg-primary', 'text-white', 'shadow-lg', 'ring-1', 'ring-primary');
-                    button.classList.remove('bg-white', 'dark:bg-[#1a2634]', 'text-gray-600', 'dark:text-gray-300', 'font-medium', 'border', 'border-gray-100', 'dark:border-gray-700', 'shadow-sm');
+                    button.classList.remove('bg-white', 'text-gray-600', 'font-medium', 'border', 'border-gray-100', 'shadow-sm');
 
                     projectCards.forEach(card => {
                         const categories = card.getAttribute('data-category');
@@ -512,8 +562,6 @@
                         }
                     });
 
-                    // Re-trigger AOS to handle newly visible items if necessary
-                    // Note: AOS usually handles entries, but display:none might reset them
                     AOS.refresh();
                 });
             });
@@ -521,7 +569,27 @@
     </script>
     <script src="animations.js"></script>
     <script src="mobile-menu.js"></script>
-    <script src="dark-mode.js"></script>
+
+    <!-- Navbar scroll behavior -->
+    <script>
+        (function () {
+            const navbar = document.getElementById('main-navbar');
+            if (!navbar) return;
+
+            function updateNavbar() {
+                if (window.scrollY > 80) {
+                    navbar.classList.remove('navbar-transparent');
+                    navbar.classList.add('navbar-solid');
+                } else {
+                    navbar.classList.remove('navbar-solid');
+                    navbar.classList.add('navbar-transparent');
+                }
+            }
+
+            window.addEventListener('scroll', updateNavbar, { passive: true });
+            updateNavbar();
+        })();
+    </script>
 </body>
 
 </html>
