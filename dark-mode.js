@@ -3,12 +3,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const toggleBtn = document.getElementById("dark-mode-toggle");
     const toggleIcon = document.getElementById("dark-mode-icon");
 
-    // Load saved preference or fall back to system preference
+    // Always default to light theme (ignore device dark mode setting)
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
         html.className = savedTheme;
-    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-        html.className = "dark";
+    } else {
+        html.className = "light";
     }
 
     function updateIcon() {
