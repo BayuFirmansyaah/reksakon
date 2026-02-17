@@ -44,26 +44,77 @@
         }
     </script>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
         }
 
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Transparent Navbar */
+        header {
+            background: transparent !important;
+            border-bottom: 1px solid transparent !important;
+            transition: background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+        }
+
+        header.navbar-scrolled {
+            background: rgba(255, 255, 255, 0.98) !important;
+            border-bottom: 1px solid #f0f2f5 !important;
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.06);
+        }
+
+        header.navbar-transparent nav a,
+        header.navbar-transparent h2,
+        header.navbar-transparent #mobile-menu-toggle {
+            color: #ffffff !important;
+            transition: color 0.35s ease;
+        }
+
+        header.navbar-transparent nav a:hover {
+            color: rgba(255, 255, 255, 0.7) !important;
+        }
+
+        header.navbar-scrolled nav a,
+        header.navbar-scrolled h2,
+        header.navbar-scrolled #mobile-menu-toggle {
+            color: #101418 !important;
+            transition: color 0.35s ease;
+        }
+
+        header.navbar-scrolled nav a:hover {
+            color: #002047 !important;
+        }
+
+        .logo-shadow {
+            transition: filter 0.35s ease;
+        }
+
+        header.navbar-transparent .logo-shadow {
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.7)) drop-shadow(0 0 4px rgba(255, 255, 255, 0.5));
+        }
+
+        header.navbar-scrolled .logo-shadow {
+            filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.15)) drop-shadow(0 1px 3px rgba(0, 0, 0, 0.1));
         }
     </style>
     <link rel="stylesheet" href="animations.css">
 </head>
 
 <body class="bg-white text-[#101418] dark:bg-background-dark dark:text-white font-display antialiased">
-    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
-        <header
-            class="sticky top-0 z-50 bg-white dark:bg-background-dark border-b border-solid border-b-[#f0f2f5] dark:border-b-gray-800">
+    <div class="relative flex h-auto min-h-screen w-full flex-col">
+        <header class="fixed top-0 left-0 right-0 z-50">
             <div class="layout-container flex w-full justify-center">
                 <div
                     class="w-full max-w-[1280px] px-4 md:px-10 py-4 flex items-center justify-between whitespace-nowrap">
                     <div class="flex items-center gap-4 text-primary dark:text-white">
-                        <img src="logo.png" alt="Rekayasa Sarana Konstruksi Logo" class="h-10 w-auto">
+                        <img src="logo.png" alt="Rekayasa Sarana Konstruksi Logo" class="h-10 w-auto logo-shadow">
                         <h2 class="text-primary dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">
                             Rekayasa Sarana Konstruksi</h2>
                     </div>
@@ -668,6 +719,7 @@
         });
     </script>
     <script src="animations.js"></script>
+    <script src="navbar-scroll.js"></script>
     <script src="mobile-menu.js"></script>
     <script src="dark-mode.js"></script>
 </body>
