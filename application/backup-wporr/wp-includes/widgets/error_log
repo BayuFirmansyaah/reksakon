@@ -1,0 +1,4 @@
+[05-Sep-2024 18:53:40 UTC] PHP Fatal error:  Class 'WP_Widget' not found in /home2/reksakon/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[14-Feb-2025 20:02:24 UTC] PHP Fatal error:  Class 'WP_Widget' not found in /home2/reksakon/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[21-Feb-2025 10:42:29 UTC] PHP Fatal error:  Class 'WP_Widget' not found in /home2/reksakon/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[22-Feb-2025 12:02:27 UTC] PHP Fatal error:  Class 'WP_Widget' not found in /home2/reksakon/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17

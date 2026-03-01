@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.7.4
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Generation Time: Mar 31, 2024 at 05:07 PM
+- Server version: 10.1.30-MariaDB
+- PHP Version: 7.2.1
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="rf_pro" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="contact_us">
+                CREATE TABLE `contact_us` (
+                  `ID` int(11) NOT NULL AUTO_INCREMENT,
+                  `JENIS` varchar(255) NOT NULL,
+                  `KETERANGAN` varchar(255) NOT NULL,
+                  `NO` varchar(255) NOT NULL,
+                  `EMAIL` varchar(255) NOT NULL,
+                  `OFFICE` varchar(10000) DEFAULT NULL,
+                  PRIMARY KEY (`ID`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="home_information">
+                CREATE TABLE `home_information` (
+                  `ID` int(100) NOT NULL,
+                  `NAMA` varchar(255) DEFAULT NULL,
+                  `KETERANGAN` varchar(1000) DEFAULT NULL,
+                  `PICT` varchar(255) DEFAULT NULL,
+                  PRIMARY KEY (`ID`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="our_service">
+                CREATE TABLE `our_service` (
+                  `ID` int(200) NOT NULL AUTO_INCREMENT,
+                  `NAMA` varchar(255) NOT NULL,
+                  `KETERANGAN` varchar(1000) NOT NULL,
+                  `PICT` varchar(255) NOT NULL,
+                  `TANGGAL` date NOT NULL,
+                  PRIMARY KEY (`ID`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="partnership">
+                CREATE TABLE `partnership` (
+                  `ID` int(11) NOT NULL,
+                  `NAMA` varchar(255) NOT NULL,
+                  `KETERANGAN` varchar(255) NOT NULL,
+                  `pict` varchar(255) NOT NULL,
+                  `TANGGAL` date NOT NULL,
+                  PRIMARY KEY (`ID`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="project">
+                CREATE TABLE `project` (
+                  `ID` int(11) NOT NULL AUTO_INCREMENT,
+                  `IDPRODUK` varchar(255) DEFAULT NULL,
+                  `NAMAPRODUK` varchar(255) DEFAULT NULL,
+                  `KETERANGAN` varchar(255) DEFAULT NULL,
+                  `PICT` varchar(255) NOT NULL,
+                  `PICT_2` varchar(200) NOT NULL,
+                  `TANGGAL` date NOT NULL,
+                  `ID_SERVICE` int(11) DEFAULT NULL,
+                  `PROJECT_OWNER` varchar(100) NOT NULL,
+                  `CLIENT_PROJECT` varchar(100) NOT NULL,
+                  `LOCATION` varchar(100) NOT NULL,
+                  PRIMARY KEY (`ID`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="user">
+                CREATE TABLE `user` (
+                  `id` int(200) NOT NULL AUTO_INCREMENT,
+                  `name` varchar(32) NOT NULL,
+                  `email` varchar(64) NOT NULL,
+                  `username` varchar(64) NOT NULL,
+                  `password` varchar(255) NOT NULL,
+                  `avatar` varchar(100) DEFAULT NULL,
+                  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+                  `last_login` timestamp NULL DEFAULT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+            </pma:table>
+            <pma:table name="work_experience">
+                CREATE TABLE `work_experience` (
+                  `YEAR` date NOT NULL,
+                  `PROJECT_NAME` varchar(100) NOT NULL,
+                  `PROJECT_OWNER` varchar(100) NOT NULL,
+                  `LOCATION` varchar(100) NOT NULL,
+                  `CLIENT` varchar(100) NOT NULL,
+                  `WORK_PACKAGE` varchar(250) NOT NULL
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'rf_pro'
+    -->
+    <database name="rf_pro">
+        <!-- Table contact_us -->
+        <table name="contact_us">
+            <column name="ID">2</column>
+            <column name="JENIS">MARKETING</column>
+            <column name="KETERANGAN">Unang</column>
+            <column name="NO">6282132236279</column>
+            <column name="EMAIL">unang@reksakon.com</column>
+            <column name="OFFICE">JL.Surabaya Barat No.99</column>
+        </table>
+        <table name="contact_us">
+            <column name="ID">3</column>
+            <column name="JENIS">ADMIN</column>
+            <column name="KETERANGAN">RUFI</column>
+            <column name="NO">62123456789</column>
+            <column name="EMAIL">rufi@reksakon.com</column>
+            <column name="OFFICE">JL.Malang melintang no.99</column>
+        </table>
+        <!-- Table home_information -->
+        <table name="home_information">
+            <column name="ID">0</column>
+            <column name="NAMA">ABOUT_US</column>
+            <column name="KETERANGAN">PT Rekayasa Sarana Konstruksi, berawal dari jasa penyediaan layanan suplai dan sewa scaffolding, suplai peralatan dan tenaga kerja konstruksi, serta penyediaan jasa pekerjaan sipil dan bangunan di berbagai proyek; baik industri manufaktur, rancang bangun pabrik dan kilang minyak.
+Kami menyediakan dukungan pengerjaan dan ikut berpartisipasi dalam rangkaian pekerjaan proyek sampai tahap akhir.
+Terus berinovasi sesuai tantangan perkembangan industri dan kemajuan teknologi di Indonesia, kami pun mengembangkan badan usaha baru. Berbekal sumber daya manusia berpengalaman dalam menyelesaikan proyek skala EPC nasional dan internasional di Indonesia, kami X-42
+anchor
+Y: 12
+menyediakan jasa layanan pekerjaa konstruksi berkualitas tinggi, terpercaya, dan memiliki nilai tambah.
+PT Rekayasa Sarana Konstruksi siap berkolaborasi bersama
+para pemangku kepentingan, pelaku usaha konstruksi, maupun para pemilik proyek dengan prinsip saling menguntungkan, terbuka dan profesional.</column>
+            <column name="PICT">About_Us (2).jpg</column>
+        </table>
+        <table name="home_information">
+            <column name="ID">1</column>
+            <column name="NAMA">COMPANY</column>
+            <column name="KETERANGAN">PT.REKAYASA SARANA KONSTRUKSI</column>
+            <column name="PICT">NULL</column>
+        </table>
+        <table name="home_information">
+            <column name="ID">2</column>
+            <column name="NAMA">ALAMAT</column>
+            <column name="KETERANGAN">Jalan Komplek Taman Palem Lestari, Ruko Galaxy Blok L-37
+,
+WEST JAKARTA</column>
+            <column name="PICT">NULL</column>
+        </table>
+        <table name="home_information">
+            <column name="ID">3</column>
+            <column name="NAMA">TELP</column>
+            <column name="KETERANGAN">2155960883</column>
+            <column name="PICT">NULL</column>
+        </table>
+        <table name="home_information">
+            <column name="ID">4</column>
+            <column name="NAMA">EMAIL</column>
+            <column name="KETERANGAN">INFO@RSK.ID</column>
+            <column name="PICT">NULL</column>
+        </table>
+        <table name="home_information">
+            <column name="ID">5</column>
+            <column name="NAMA">EMAIL2</column>
+            <column name="KETERANGAN">HRD.RECRUITMENT@RSK.ID</column>
+            <column name="PICT">NULL</column>
+        </table>
+        <table name="home_information">
+            <column name="ID">6</column>
+            <column name="NAMA">EMAIL3</column>
+            <column name="KETERANGAN">MARKETING@RSK.ID</column>
+            <column name="PICT">NULL</column>
+        </table>
+        <table name="home_information">
+            <column name="ID">7</column>
+            <column name="NAMA">EMAIL4</column>
+            <column name="KETERANGAN">CONSUMER@RSK.ID</column>
+            <column name="PICT">NULL</column>
+        </table>
+        <table name="home_information">
+            <column name="ID">8</column>
+            <column name="NAMA">BACKGROUND_HOME1</column>
+            <column name="KETERANGAN">NULL</column>
+            <column name="PICT">bg_home1.jpg</column>
+        </table>
+        <table name="home_information">
+            <column name="ID">9</column>
+            <column name="NAMA">BACKGROUND_HOME2</column>
+            <column name="KETERANGAN">NULL</column>
+            <column name="PICT">bg_home2.jpg</column>
+        </table>
+        <table name="home_information">
+            <column name="ID">10</column>
+            <column name="NAMA">MAPS</column>
+            <column name="KETERANGAN">https://www.google.com/maps/place/6%C2%B008'09.0%22S+106%C2%B043'42.2%22E/@-6.135844,106.728393,17z/data=!3m1!4b1!4m4!3m3!8m2!3d-6.135844!4d106.728393?entry=ttu</column>
+            <column name="PICT">NULL</column>
+        </table>
+        <table name="home_information">
+            <column name="ID">11</column>
+            <column name="NAMA">ACC_INSTAGRAM</column>
+            <column name="KETERANGAN">https://www.instagram.com/rioadityapradana27/</column>
+            <column name="PICT">NULL</column>
+        </table>
+        <table name="home_information">
+            <column name="ID">12</column>
+            <column name="NAMA">ACC_FACEBOOK</column>
+            <column name="KETERANGAN">https://www.facebook.com/xbootpower7610/?locale=id_ID</column>
+            <column name="PICT">NULL</column>
+        </table>
+        <table name="home_information">
+            <column name="ID">13</column>
+            <column name="NAMA">ACC_LINKEDIN</column>
+            <column name="KETERANGAN">https://www.linkedin.com/in/rio-aditya-pradana-a70784165/</column>
+            <column name="PICT">NULL</column>
+        </table>
+        <table name="home_information">
+            <column name="ID">14</column>
+            <column name="NAMA">ACC_TWITTER</column>
+            <column name="KETERANGAN"></column>
+            <column name="PICT">NULL</column>
+        </table>
+        <table name="home_information">
+            <column name="ID">15</column>
+            <column name="NAMA">OUR_SERVICES</column>
+            <column name="KETERANGAN">&lt;b&gt;Solution-Focused&lt;/b&gt;
+&lt;/br&gt;
+We offer the best solutions to address challenges and issues, with the goal of building trust through a win-win solution approach.
+
+Expertise Mastery
+
+We grow and continually evolve with extensive knowledge to provide the best services.</column>
+            <column name="PICT">NULL</column>
+        </table>
+        <table name="home_information">
+            <column name="ID">16</column>
+            <column name="NAMA">OUR_SERVICES_HEADER</column>
+            <column name="KETERANGAN">&lt;b&gt;Responsive and Responsible&lt;/b&gt;&lt;/br&gt;
+
+We are quick to respond to client needs and take responsibility for the entrusted tasks.</column>
+            <column name="PICT">NULL</column>
+        </table>
+        <!-- Table our_service -->
+        <table name="our_service">
+            <column name="ID">16</column>
+            <column name="NAMA">Scaffholding Supply</column>
+            <column name="KETERANGAN">We are dedicated to providing superior  scaffolding solutions customized to meet the precise needs of industrial operations. Our approach prioritizes safety, efficiency, and reliability, ensuring the effective support of your projects. Collaborating closely with clients, our experienced team crafts tailored scaffolding solutions to maximize safety and efficiency. We are committed to delivering unparalleled services that enhance the success of your industrial projects. Trust us as your dependable partner in achieving scaffolding excellence</column>
+            <column name="PICT">16.jpg</column>
+            <column name="TANGGAL">0000-00-00</column>
+        </table>
+        <table name="our_service">
+            <column name="ID">17</column>
+            <column name="NAMA">Man Power Supply</column>
+            <column name="KETERANGAN">After:  “We guarantee a streamlined, comfortable, and reassuring labor recruitment process, all the while maintaining unwavering standards of quality and integrity for each project we undertake. Our commitment extends to sourcing only the most skilled and qualified professionals, ensuring optimal project performance and success</column>
+            <column name="PICT">17.jpg</column>
+            <column name="TANGGAL">0000-00-00</column>
+        </table>
+        <table name="our_service">
+            <column name="ID">18</column>
+            <column name="NAMA">Construction Material Supply</column>
+            <column name="KETERANGAN">Our company stands prepared to meet the diverse requirements of our clients, providing an extensive range of construction and consumable materials. We are committed to delivering exceptional quality and service to fulfill every aspect of our clients' needs</column>
+            <column name="PICT">18.jpg</column>
+            <column name="TANGGAL">0000-00-00</column>
+        </table>
+        <table name="our_service">
+            <column name="ID">19</column>
+            <column name="NAMA">Fabrication Services for Steel Structures and Tanks</column>
+            <column name="KETERANGAN">Our company offers expert fabrication services for steel structures and tanks, supported by a dedicated engineering and fabrication team. Our commitment to quality assurance ensures that we enhance the functional value of raw materials to meet and exceed our clients' expectations</column>
+            <column name="PICT">19.jpg</column>
+            <column name="TANGGAL">0000-00-00</column>
+        </table>
+        <table name="our_service">
+            <column name="ID">20</column>
+            <column name="NAMA">Temporary Facility Services</column>
+            <column name="KETERANGAN">After: “Our company is well-equipped to offer extensive support in establishing and maintaining Temporary Facilities crucial for diverse industrial projects. From field offices and worker accommodations to essential support facilities and utilities, we ensure seamless assistance throughout all stages of project development and execution.</column>
+            <column name="PICT">20.jpg</column>
+            <column name="TANGGAL">0000-00-00</column>
+        </table>
+        <table name="our_service">
+            <column name="ID">21</column>
+            <column name="NAMA">Consturction Services for Civil, Buildings, Steel Structures, Mechanical, Electrical &amp; Instrumentation</column>
+            <column name="KETERANGAN">After: “Each member of our team possesses extensive expertise in delivering diverse projects encompassing construction services for civil works, buildings, steel structures erection, mechanical installations, electrical and instrumentation works. Our specialized focus lies in providing comprehensive support tailored to meet the unique requirements of the energy, infrastructure, mining, and manufacturing sectors</column>
+            <column name="PICT">21.jpg</column>
+            <column name="TANGGAL">0000-00-00</column>
+        </table>
+        <!-- Table partnership -->
+        <table name="partnership">
+            <column name="ID">4</column>
+            <column name="NAMA">PT.FREEPORT INDONESIA</column>
+            <column name="KETERANGAN"></column>
+            <column name="pict">freeport.png</column>
+            <column name="TANGGAL">0000-00-00</column>
+        </table>
+        <table name="partnership">
+            <column name="ID">5</column>
+            <column name="NAMA">HATCH</column>
+            <column name="KETERANGAN"></column>
+            <column name="pict">hatch.png</column>
+            <column name="TANGGAL">0000-00-00</column>
+        </table>
+        <table name="partnership">
+            <column name="ID">6</column>
+            <column name="NAMA">PERTAMINA</column>
+            <column name="KETERANGAN"></column>
+            <column name="pict">pertamina.png</column>
+            <column name="TANGGAL">0000-00-00</column>
+        </table>
+        <table name="partnership">
+            <column name="ID">7</column>
+            <column name="NAMA">PETROSEA</column>
+            <column name="KETERANGAN"></column>
+            <column name="pict">petrosea.png</column>
+            <column name="TANGGAL">0000-00-00</column>
+        </table>
+        <table name="partnership">
+            <column name="ID">8</column>
+            <column name="NAMA">SWADAYA CIPTA</column>
+            <column name="KETERANGAN"></column>
+            <column name="pict">swadaya cipta.png</column>
+            <column name="TANGGAL">0000-00-00</column>
+        </table>
+        <table name="partnership">
+            <column name="ID">9</column>
+            <column name="NAMA">PT. SANG BINTANG SINERGI</column>
+            <column name="KETERANGAN"></column>
+            <column name="pict"></column>
+            <column name="TANGGAL">0000-00-00</column>
+        </table>
+        <!-- Table project -->
+        <table name="project">
+            <column name="ID">44</column>
+            <column name="IDPRODUK">PROJECT_44</column>
+            <column name="NAMAPRODUK">RDMP BALIKPAPAN</column>
+            <column name="KETERANGAN">Scaffholding supply</column>
+            <column name="PICT">44.jpg</column>
+            <column name="PICT_2">441.jpg</column>
+            <column name="TANGGAL">2022-02-22</column>
+            <column name="ID_SERVICE">0</column>
+            <column name="PROJECT_OWNER">PT. Kilang Pertamina Balikpapan</column>
+            <column name="CLIENT_PROJECT">PT.Swadaya Cipta</column>
+            <column name="LOCATION">Balikpapan</column>
+        </table>
+        <table name="project">
+            <column name="ID">45</column>
+            <column name="IDPRODUK">PROJECT_45</column>
+            <column name="NAMAPRODUK">MANYAR SMELTER PROJECT</column>
+            <column name="KETERANGAN">SEWA SCAFFHOLDING</column>
+            <column name="PICT">45.jpg</column>
+            <column name="PICT_2">451.jpg</column>
+            <column name="TANGGAL">2023-03-23</column>
+            <column name="ID_SERVICE">0</column>
+            <column name="PROJECT_OWNER">PT. FREEPORT INDONESIA</column>
+            <column name="CLIENT_PROJECT">PT. SANG BINTANG SINERGI GRESIK</column>
+            <column name="LOCATION">Gresik</column>
+        </table>
+        <table name="project">
+            <column name="ID">46</column>
+            <column name="IDPRODUK">PROJECT_46</column>
+            <column name="NAMAPRODUK">MANYAR MAJU REFINERY</column>
+            <column name="KETERANGAN">PORTA CAMP OFFICE</column>
+            <column name="PICT">46.jpg</column>
+            <column name="PICT_2">461.jpg</column>
+            <column name="TANGGAL">2023-02-23</column>
+            <column name="ID_SERVICE">0</column>
+            <column name="PROJECT_OWNER">PT.FREEPORT INDONESIA</column>
+            <column name="CLIENT_PROJECT">PT.PETROSEA</column>
+            <column name="LOCATION">Gresik</column>
+        </table>
+        <table name="project">
+            <column name="ID">47</column>
+            <column name="IDPRODUK">PROJECT_47</column>
+            <column name="NAMAPRODUK">MANYAR MAJU REFINERY</column>
+            <column name="KETERANGAN">Supply &amp; Install Sewage Holding Tank</column>
+            <column name="PICT">47.jpg</column>
+            <column name="PICT_2">471.jpg</column>
+            <column name="TANGGAL">2023-02-20</column>
+            <column name="ID_SERVICE">0</column>
+            <column name="PROJECT_OWNER">PT.FREEPORT INDONESIA</column>
+            <column name="CLIENT_PROJECT">PT.PETROSEA</column>
+            <column name="LOCATION">Gresik</column>
+        </table>
+        <!-- Table user -->
+        <table name="user">
+            <column name="id">1</column>
+            <column name="name"></column>
+            <column name="email">rio@rio.com</column>
+            <column name="username">RIO</column>
+            <column name="password">$2y$10$cECHaAK1y771UyI779RF9eNGcKChDHY9rabneS/i.WvfPg7iyqh9e</column>
+            <column name="avatar">NULL</column>
+            <column name="created_at">2024-03-09 12:01:12</column>
+            <column name="last_login">NULL</column>
+        </table>
+        <table name="user">
+            <column name="id">3</column>
+            <column name="name"></column>
+            <column name="email">123456@xc.com</column>
+            <column name="username">RERE</column>
+            <column name="password">$2y$10$ieMcp4Fr8khYlGIJDkqmjOYnbrUboLGlZOVLBUuItWgi6ZX3xeLWm</column>
+            <column name="avatar">NULL</column>
+            <column name="created_at">2024-03-09 13:25:32</column>
+            <column name="last_login">NULL</column>
+        </table>
+        <table name="user">
+            <column name="id">4</column>
+            <column name="name"></column>
+            <column name="email">admin@admin.com</column>
+            <column name="username">ADMIN</column>
+            <column name="password">$2y$10$eo917QpPHp6PELEyUC7.Ce3vBsORJdtfrzpdvVHq7JkJ/k5FEIyQW</column>
+            <column name="avatar">NULL</column>
+            <column name="created_at">2024-03-10 15:07:06</column>
+            <column name="last_login">NULL</column>
+        </table>
+        <!-- Table work_experience -->
+        <table name="work_experience">
+            <column name="YEAR">2022-03-31</column>
+            <column name="PROJECT_NAME">Refinery Development Master Plan (RDMP) Balikpapan Project</column>
+            <column name="PROJECT_OWNER">PT Kilang Pertamina Balikpapan
+</column>
+            <column name="LOCATION">Balikpapan</column>
+            <column name="CLIENT">PT Swadaya Cipta
+</column>
+            <column name="WORK_PACKAGE">Rental scaffolding</column>
+        </table>
+        <table name="work_experience">
+            <column name="YEAR">2023-03-02</column>
+            <column name="PROJECT_NAME">Manyar Smelter Project  (MSP) 
+</column>
+            <column name="PROJECT_OWNER">PT Freeport Indonesia
+</column>
+            <column name="LOCATION">Gresik</column>
+            <column name="CLIENT">PT Sang Bintang Sinergi
+</column>
+            <column name="WORK_PACKAGE">Rental scaffolding</column>
+        </table>
+        <table name="work_experience">
+            <column name="YEAR">2023-01-02</column>
+            <column name="PROJECT_NAME">Freeport Manyar Refinery (FMR) Project
+</column>
+            <column name="PROJECT_OWNER">PT Freeport Indonesia
+</column>
+            <column name="LOCATION">Gresik
+</column>
+            <column name="CLIENT">Hatch / 
+PT Petrosea
+</column>
+            <column name="WORK_PACKAGE">Portacamp Office Building 
+</column>
+        </table>
+        <table name="work_experience">
+            <column name="YEAR">2023-01-02</column>
+            <column name="PROJECT_NAME">Freeport Manyar Refinery (FMR) Project
+</column>
+            <column name="PROJECT_OWNER">PT Freeport Indonesia
+</column>
+            <column name="LOCATION">Gresik</column>
+            <column name="CLIENT">Hatch / 
+PT Petrosea
+</column>
+            <column name="WORK_PACKAGE">Supply of HDPE Butt Fusion Welding Machine</column>
+        </table>
+        <table name="work_experience">
+            <column name="YEAR">2023-01-02</column>
+            <column name="PROJECT_NAME">Freeport Manyar Refinery (FMR) Project
+</column>
+            <column name="PROJECT_OWNER">PT Freeport Indonesia
+</column>
+            <column name="LOCATION">Gresik</column>
+            <column name="CLIENT">Hatch / 
+PT Petrosea
+</column>
+            <column name="WORK_PACKAGE">Supply &amp; Install Sewage Holding Tank
+</column>
+        </table>
+        <table name="work_experience">
+            <column name="YEAR">2023-01-02</column>
+            <column name="PROJECT_NAME">Freeport Manyar Refinery (FMR) Project
+</column>
+            <column name="PROJECT_OWNER">PT Freeport Indonesia
+</column>
+            <column name="LOCATION">Gresik</column>
+            <column name="CLIENT">Hatch / 
+PT Petrosea
+</column>
+            <column name="WORK_PACKAGE">Manpower Supply for Civil Work 
+</column>
+        </table>
+        <table name="work_experience">
+            <column name="YEAR">2023-01-02</column>
+            <column name="PROJECT_NAME">Freeport Manyar Refinery (FMR) Project
+</column>
+            <column name="PROJECT_OWNER">PT Freeport Indonesia
+</column>
+            <column name="LOCATION">Gresik
+</column>
+            <column name="CLIENT">Hatch / 
+PT Petrosea
+</column>
+            <column name="WORK_PACKAGE">Supply of Flush Pond Material (HDPE Pipe, HDPE Geomembrane &amp; Geotextile)
+</column>
+        </table>
+        <table name="work_experience">
+            <column name="YEAR">2023-01-02</column>
+            <column name="PROJECT_NAME">Freeport Manyar Refinery (FMR) Project
+</column>
+            <column name="PROJECT_OWNER">PT Freeport Indonesia
+</column>
+            <column name="LOCATION">Gresik
+</column>
+            <column name="CLIENT">Hatch / 
+PT Petrosea
+</column>
+            <column name="WORK_PACKAGE">Rental scaffolding
+</column>
+        </table>
+        <table name="work_experience">
+            <column name="YEAR">2024-02-02</column>
+            <column name="PROJECT_NAME">Freeport Manyar Refinery (FMR) Project
+</column>
+            <column name="PROJECT_OWNER">PT Freeport Indonesia
+</column>
+            <column name="LOCATION">Gresik
+</column>
+            <column name="CLIENT">Hatch / 
+PT Petrosea
+</column>
+            <column name="WORK_PACKAGE">Manpower Supply for Structure, Mechanical, Piping, Electrical &amp; Instrument
+</column>
+        </table>
+        <table name="work_experience">
+            <column name="YEAR">2023-01-02</column>
+            <column name="PROJECT_NAME">Manyar Smelter Project  (MSP) 
+</column>
+            <column name="PROJECT_OWNER">PT Freeport Indonesia
+</column>
+            <column name="LOCATION">Gresik</column>
+            <column name="CLIENT">PT Chiyoda International Indonesia
+</column>
+            <column name="WORK_PACKAGE">Supply Construction Material
+</column>
+        </table>
+        <table name="work_experience">
+            <column name="YEAR">2024-01-02</column>
+            <column name="PROJECT_NAME">Freeport Manyar Refinery (FMR) Project
+</column>
+            <column name="PROJECT_OWNER">PT Freeport Indonesia
+</column>
+            <column name="LOCATION">Gresik</column>
+            <column name="CLIENT">Hatch / 
+PT Prima Unggul Persada
+</column>
+            <column name="WORK_PACKAGE">Manpower Supply for Civil &amp; Building
+</column>
+        </table>
+    </database>
+</pma_xml_export>
